@@ -13,15 +13,19 @@ type alias GameMapData = List (Maybe Empire, LandData)
 
 type alias LandData = List ProvinceData
 
-type ProvinceData 
+type ProvinceData
     = Capital ProvinceInfo
     | Noncapital ProvinceInfo
 
-type Location
+type alias Location = (LocationID, Adjacencies)
     = Coast LocationID Adjacencies
     | Land LocationID Adjacencies
     | Sea LocationID Adjacencies
 
+type LocationID
+    = Coast String
+    | Land
+    | Sea
 
 type alias ProvinceInfo = (ProvinceID, List Location)
 type alias ProvinceID = String

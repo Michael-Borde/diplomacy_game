@@ -59,6 +59,26 @@ getMoves gm p = getAdjacencies gm (getPieceInfo p).location
 canMove : GameMap -> Piece -> LocationID -> Bool
 canMove gm p lid = List.member lid <| getAdjacencies gm (getPieceInfo p).location
 
+getProvinceID : GameMap -> LocationID -> ProvinceID
+getProvinceID gm lid =
+    let location = getLocation gm lid in
+    location.pid
+
+isCapital : GameMap -> LocationID -> Bool
+isCapital gm lid =
+    let province = getProvince gm lid in
+    case province of
+        Capital _       -> True
+        Noncapital _    -> False
+
+getLocations : GameMap -> ProvinceID -> Bool
+getLocations gm pid =
+    List.filter (\loc -> loc.pid == pid) gm
+
+
+
+-------------------------------------------------------
+
 convert : GMD.GameMapData -> GameMap
 convert gmd =
     List.concat (List.map processEmpire gmd)

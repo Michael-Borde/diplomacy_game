@@ -3,7 +3,8 @@ module Main exposing (main)
 import Gameboard exposing (..)
 import GameMap exposing (..)
 
-import Html exposing (Html)
+import Html exposing (..)
+import Html.Events exposing (onClick)
 
 main : Program Never Model Msg
 main =
@@ -22,7 +23,7 @@ type Msg
     | SelectMove MoveDirective
     | SelectRetreat RetreatDirective
     | Cancel
-    | LockIn
+    | EndTurn
 
 type alias Model =
     { gameboard : Gameboard }
@@ -36,14 +37,48 @@ initialModel =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Debug.crash "TODO"
+    Sub.none
 
 update : Msg -> Model -> (Model, Cmd Msg)
-update msg model = (model, Cmd.none)
+update msg model = case msg of
+    EndTurn -> 
+        let
+            gameboard = nextTurn model.gameboard
+        in
+            ({ model | gameboard = gameboard}, Cmd.none)
+    _ -> Debug.crash "TODO: any message but EndTurn"
 
 view : Model -> Html Msg
 view model =
-    case model.gameboard.phase of
-        Move _ ->
-        Retreat _ ->
-        Build _ -> 
+    let
+        date 
+            = model.gameboard.date
+            |> toString
+            |> text
+            |> List.singleton
+            |> h3 []
+        phase 
+            = model.gameboard
+            |> getPhaseAsString
+            |> text
+            |> List.singleton
+            |>  h3 []
+            
+        empire 
+            = model.gameboard
+            |> getTurnAsString
+            |> text
+            |> List.singleton
+            |> h3 []
+
+        endTurnButton = 
+            button [ onClick EndTurn ] [ text "End Turn" ]
+    in  
+        div []
+            [ div [] 
+                [ date
+                , phase
+                , empire
+                ]
+            , endTurnButton
+            ]

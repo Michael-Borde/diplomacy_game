@@ -1,0 +1,4524 @@
+var _user$project$Europe$seas = A2(
+	_elm_lang$core$List$map,
+	_user$project$GameMapData$Noncapital,
+	{
+		ctor: '::',
+		_0: {
+			ctor: '_Tuple2',
+			_0: 'Barents Sea',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Sea,
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Norway',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'St. Petersburg',
+								_1: _user$project$GameMapData$Coast('North')
+							},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Norwegian Sea', _1: _user$project$GameMapData$Sea},
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				_1: {ctor: '[]'}
+			}
+		},
+		_1: {
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: 'Norwegian Sea',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Sea,
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Norway',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Edinburgh',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Clyde',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'North Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'North Sea',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Sea,
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Edinburgh',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Yorkshire',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'London',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Belgium',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Holland',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Denmark',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'Norway',
+															_1: _user$project$GameMapData$Coast('')
+														},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Norwegian Sea', _1: _user$project$GameMapData$Sea},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Skagerrrack Sea', _1: _user$project$GameMapData$Sea},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Heligoland Bight', _1: _user$project$GameMapData$Sea},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'English Channel', _1: _user$project$GameMapData$Sea},
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'Skaggerrack',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Sea,
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Norway',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Sweden',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Denmark',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							},
+							_1: {ctor: '[]'}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Heligoland Bight',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Sea,
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Kiel',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Holland',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Denmark',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Baltic Sea',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Sea,
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Sweden',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Denmark',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Kiel',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'Berlin',
+															_1: _user$project$GameMapData$Coast('')
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Prussia',
+																_1: _user$project$GameMapData$Coast('')
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'Livonia',
+																	_1: _user$project$GameMapData$Coast('')
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Gulf of Bothnia', _1: _user$project$GameMapData$Sea},
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Gulf of Bothnia',
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Sea,
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Swedent',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Finland',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'St. Petersburg',
+															_1: _user$project$GameMapData$Coast('South')
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Livonia',
+																_1: _user$project$GameMapData$Coast('')
+															},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Baltic Sea', _1: _user$project$GameMapData$Sea},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										},
+										_1: {ctor: '[]'}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'North Atlantic Ocean',
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: _user$project$GameMapData$Sea,
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Clyde',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Norwegian Sea', _1: _user$project$GameMapData$Sea},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Irish Sea', _1: _user$project$GameMapData$Sea},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											},
+											_1: {ctor: '[]'}
+										}
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Irish Sea',
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: _user$project$GameMapData$Sea,
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'Wales',
+															_1: _user$project$GameMapData$Coast('')
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Liverpool',
+																_1: _user$project$GameMapData$Coast('')
+															},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'North Alantic Ocean', _1: _user$project$GameMapData$Sea},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Mid-Alantic Ocean', _1: _user$project$GameMapData$Sea},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'English Channel Sea', _1: _user$project$GameMapData$Sea},
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												},
+												_1: {ctor: '[]'}
+											}
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'English Channel',
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: _user$project$GameMapData$Sea,
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Wales',
+																_1: _user$project$GameMapData$Coast('')
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'London',
+																	_1: _user$project$GameMapData$Coast('')
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: 'Belgium',
+																		_1: _user$project$GameMapData$Coast('')
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: 'Picardy',
+																			_1: _user$project$GameMapData$Coast('')
+																		},
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: 'Brest',
+																				_1: _user$project$GameMapData$Coast('')
+																			},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'Irish Sea', _1: _user$project$GameMapData$Sea},
+																					_1: {
+																						ctor: '::',
+																						_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													},
+													_1: {ctor: '[]'}
+												}
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Mid-Atlantic Ocean',
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: _user$project$GameMapData$Sea,
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'Brest',
+																	_1: _user$project$GameMapData$Coast('')
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: 'Gascony',
+																		_1: _user$project$GameMapData$Coast('')
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: 'Spain',
+																			_1: _user$project$GameMapData$Coast('North')
+																		},
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: 'Portugal',
+																				_1: _user$project$GameMapData$Coast('')
+																			},
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: 'Spain',
+																					_1: _user$project$GameMapData$Coast('South')
+																				},
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple2',
+																						_0: 'North Africa',
+																						_1: _user$project$GameMapData$Coast('')
+																					},
+																					_1: {
+																						ctor: '::',
+																						_0: {ctor: '_Tuple2', _0: 'North Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+																						_1: {
+																							ctor: '::',
+																							_0: {ctor: '_Tuple2', _0: 'Irish Sea', _1: _user$project$GameMapData$Sea},
+																							_1: {
+																								ctor: '::',
+																								_0: {ctor: '_Tuple2', _0: 'English Channel', _1: _user$project$GameMapData$Sea},
+																								_1: {
+																									ctor: '::',
+																									_0: {ctor: '_Tuple2', _0: 'Western Mediterranean', _1: _user$project$GameMapData$Sea},
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														},
+														_1: {ctor: '[]'}
+													}
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Western Mediterranean',
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: _user$project$GameMapData$Sea,
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: 'North Africa',
+																		_1: _user$project$GameMapData$Coast('')
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: 'Spain',
+																			_1: _user$project$GameMapData$Coast('South')
+																		},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Western Mediterranean', _1: _user$project$GameMapData$Sea},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'Gulf of Lyons', _1: _user$project$GameMapData$Sea},
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	}
+																}
+															},
+															_1: {ctor: '[]'}
+														}
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'Gulf of Lyons',
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: _user$project$GameMapData$Sea,
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: 'Tuscany',
+																			_1: _user$project$GameMapData$Coast('')
+																		},
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: 'Piedmont',
+																				_1: _user$project$GameMapData$Coast('')
+																			},
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: 'Marseilles',
+																					_1: _user$project$GameMapData$Coast('')
+																				},
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple2',
+																						_0: 'Spain',
+																						_1: _user$project$GameMapData$Coast('South')
+																					},
+																					_1: {
+																						ctor: '::',
+																						_0: {ctor: '_Tuple2', _0: 'Western Mediterranean', _1: _user$project$GameMapData$Sea},
+																						_1: {
+																							ctor: '::',
+																							_0: {ctor: '_Tuple2', _0: 'Tyrrhenian Sea', _1: _user$project$GameMapData$Sea},
+																							_1: {ctor: '[]'}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																},
+																_1: {ctor: '[]'}
+															}
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Tyrrhenian Sea',
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: _user$project$GameMapData$Sea,
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: 'Tuscany',
+																				_1: _user$project$GameMapData$Coast('')
+																			},
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: 'Rome',
+																					_1: _user$project$GameMapData$Coast('')
+																				},
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple2',
+																						_0: 'Naples',
+																						_1: _user$project$GameMapData$Coast('')
+																					},
+																					_1: {
+																						ctor: '::',
+																						_0: {
+																							ctor: '_Tuple2',
+																							_0: 'Tunis',
+																							_1: _user$project$GameMapData$Coast('')
+																						},
+																						_1: {
+																							ctor: '::',
+																							_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+																							_1: {
+																								ctor: '::',
+																								_0: {ctor: '_Tuple2', _0: 'Western Mediterranean', _1: _user$project$GameMapData$Sea},
+																								_1: {
+																									ctor: '::',
+																									_0: {ctor: '_Tuple2', _0: 'Gulf of Lyons', _1: _user$project$GameMapData$Sea},
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	},
+																	_1: {ctor: '[]'}
+																}
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'Ionian Sea',
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: _user$project$GameMapData$Sea,
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: 'Tunis',
+																					_1: _user$project$GameMapData$Coast('')
+																				},
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple2',
+																						_0: 'Naples',
+																						_1: _user$project$GameMapData$Coast('')
+																					},
+																					_1: {
+																						ctor: '::',
+																						_0: {
+																							ctor: '_Tuple2',
+																							_0: 'Apulia',
+																							_1: _user$project$GameMapData$Coast('')
+																						},
+																						_1: {
+																							ctor: '::',
+																							_0: {
+																								ctor: '_Tuple2',
+																								_0: 'Albania',
+																								_1: _user$project$GameMapData$Coast('')
+																							},
+																							_1: {
+																								ctor: '::',
+																								_0: {
+																									ctor: '_Tuple2',
+																									_0: 'Greece',
+																									_1: _user$project$GameMapData$Coast('')
+																								},
+																								_1: {
+																									ctor: '::',
+																									_0: {ctor: '_Tuple2', _0: 'Tyrrhenian Sea', _1: _user$project$GameMapData$Sea},
+																									_1: {
+																										ctor: '::',
+																										_0: {ctor: '_Tuple2', _0: 'Adriatic Sea', _1: _user$project$GameMapData$Sea},
+																										_1: {
+																											ctor: '::',
+																											_0: {ctor: '_Tuple2', _0: 'Aegean Sea', _1: _user$project$GameMapData$Sea},
+																											_1: {
+																												ctor: '::',
+																												_0: {ctor: '_Tuple2', _0: 'Eastern Mediterranean', _1: _user$project$GameMapData$Sea},
+																												_1: {ctor: '[]'}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		},
+																		_1: {ctor: '[]'}
+																	}
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: 'Adriatic Sea',
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: _user$project$GameMapData$Sea,
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple2',
+																						_0: 'Albania',
+																						_1: _user$project$GameMapData$Coast('')
+																					},
+																					_1: {
+																						ctor: '::',
+																						_0: {
+																							ctor: '_Tuple2',
+																							_0: 'Trieste',
+																							_1: _user$project$GameMapData$Coast('')
+																						},
+																						_1: {
+																							ctor: '::',
+																							_0: {
+																								ctor: '_Tuple2',
+																								_0: 'Venice',
+																								_1: _user$project$GameMapData$Coast('')
+																							},
+																							_1: {
+																								ctor: '::',
+																								_0: {
+																									ctor: '_Tuple2',
+																									_0: 'Apulia',
+																									_1: _user$project$GameMapData$Coast('')
+																								},
+																								_1: {
+																									ctor: '::',
+																									_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			},
+																			_1: {ctor: '[]'}
+																		}
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: 'Aegean Sea',
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: _user$project$GameMapData$Sea,
+																					_1: {
+																						ctor: '::',
+																						_0: {
+																							ctor: '_Tuple2',
+																							_0: 'Greece',
+																							_1: _user$project$GameMapData$Coast('')
+																						},
+																						_1: {
+																							ctor: '::',
+																							_0: {
+																								ctor: '_Tuple2',
+																								_0: 'Bulgaria',
+																								_1: _user$project$GameMapData$Coast('South')
+																							},
+																							_1: {
+																								ctor: '::',
+																								_0: {
+																									ctor: '_Tuple2',
+																									_0: 'Constantinople',
+																									_1: _user$project$GameMapData$Coast('')
+																								},
+																								_1: {
+																									ctor: '::',
+																									_0: {
+																										ctor: '_Tuple2',
+																										_0: 'Smyrna',
+																										_1: _user$project$GameMapData$Coast('')
+																									},
+																									_1: {
+																										ctor: '::',
+																										_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+																										_1: {
+																											ctor: '::',
+																											_0: {ctor: '_Tuple2', _0: 'Eastern Mediterranean', _1: _user$project$GameMapData$Sea},
+																											_1: {ctor: '[]'}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				},
+																				_1: {ctor: '[]'}
+																			}
+																		},
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: 'Black Sea',
+																				_1: {
+																					ctor: '::',
+																					_0: {
+																						ctor: '_Tuple2',
+																						_0: _user$project$GameMapData$Sea,
+																						_1: {
+																							ctor: '::',
+																							_0: {
+																								ctor: '_Tuple2',
+																								_0: 'Sevastopol',
+																								_1: _user$project$GameMapData$Coast('')
+																							},
+																							_1: {
+																								ctor: '::',
+																								_0: {
+																									ctor: '_Tuple2',
+																									_0: 'Rumania',
+																									_1: _user$project$GameMapData$Coast('')
+																								},
+																								_1: {
+																									ctor: '::',
+																									_0: {
+																										ctor: '_Tuple2',
+																										_0: 'Bulgaria',
+																										_1: _user$project$GameMapData$Coast('East')
+																									},
+																									_1: {
+																										ctor: '::',
+																										_0: {
+																											ctor: '_Tuple2',
+																											_0: 'Constantinople',
+																											_1: _user$project$GameMapData$Coast('')
+																										},
+																										_1: {
+																											ctor: '::',
+																											_0: {
+																												ctor: '_Tuple2',
+																												_0: 'Ankara',
+																												_1: _user$project$GameMapData$Coast('')
+																											},
+																											_1: {
+																												ctor: '::',
+																												_0: {
+																													ctor: '_Tuple2',
+																													_0: 'Armenia',
+																													_1: _user$project$GameMapData$Coast('')
+																												},
+																												_1: {
+																													ctor: '::',
+																													_0: {ctor: '_Tuple2', _0: 'Aegean Sea', _1: _user$project$GameMapData$Sea},
+																													_1: {ctor: '[]'}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					},
+																					_1: {ctor: '[]'}
+																				}
+																			},
+																			_1: {
+																				ctor: '::',
+																				_0: {
+																					ctor: '_Tuple2',
+																					_0: 'Eastern Mediterranean',
+																					_1: {
+																						ctor: '::',
+																						_0: {
+																							ctor: '_Tuple2',
+																							_0: _user$project$GameMapData$Sea,
+																							_1: {
+																								ctor: '::',
+																								_0: {
+																									ctor: '_Tuple2',
+																									_0: 'Smyrna',
+																									_1: _user$project$GameMapData$Coast('')
+																								},
+																								_1: {
+																									ctor: '::',
+																									_0: {
+																										ctor: '_Tuple2',
+																										_0: 'Syria',
+																										_1: _user$project$GameMapData$Coast('')
+																									},
+																									_1: {
+																										ctor: '::',
+																										_0: {ctor: '_Tuple2', _0: 'Aegean Sea', _1: _user$project$GameMapData$Sea},
+																										_1: {
+																											ctor: '::',
+																											_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+																											_1: {ctor: '[]'}
+																										}
+																									}
+																								}
+																							}
+																						},
+																						_1: {ctor: '[]'}
+																					}
+																				},
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+var _user$project$Europe$nothingData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'Norway',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast(''),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'St. Petersburg',
+							_1: _user$project$GameMapData$Coast('North')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Sweden',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Skagerrack', _1: _user$project$GameMapData$Sea},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Norwegian Sea', _1: _user$project$GameMapData$Sea},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Sweden', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Finland', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'St. Petersburg', _1: _user$project$GameMapData$Land},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Sweden',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Coast(''),
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Norway',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Finland',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Denmark',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Gulf of Bothnia', _1: _user$project$GameMapData$Sea},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Baltic Sea', _1: _user$project$GameMapData$Sea},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Skagerrack', _1: _user$project$GameMapData$Sea},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Constantinople', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Smyrna', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Armenia', _1: _user$project$GameMapData$Land},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'Denmark',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Coast(''),
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Sweden',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Kiel',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Baltic Sea', _1: _user$project$GameMapData$Sea},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Skagerrack', _1: _user$project$GameMapData$Sea},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Heligoland Bight', _1: _user$project$GameMapData$Sea},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Land,
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Kiel', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Sweden', _1: _user$project$GameMapData$Land},
+										_1: {ctor: '[]'}
+									}
+								}
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Capital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Holland',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Coast(''),
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Belgium',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Kiel',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Heligoland Bight', _1: _user$project$GameMapData$Sea},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Kiel', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Ruhr', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Belgium', _1: _user$project$GameMapData$Land},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Capital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Belgium',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Coast(''),
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Holland',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Picardy',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'English Channel', _1: _user$project$GameMapData$Sea},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Holland', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Ruhr', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Burgundy', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Picardy', _1: _user$project$GameMapData$Land},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$GameMapData$Capital(
+							{
+								ctor: '_Tuple2',
+								_0: 'Spain',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Coast('North'),
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Gascony',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Portugal',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Coast('South'),
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Marseilles',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Portugal',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Gulf of Lyons', _1: _user$project$GameMapData$Sea},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Western Mediterranean', _1: _user$project$GameMapData$Sea},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: _user$project$GameMapData$Land,
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Gascony', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Marseilles', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Portugal', _1: _user$project$GameMapData$Land},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Picardy', _1: _user$project$GameMapData$Land},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}),
+						_1: {
+							ctor: '::',
+							_0: _user$project$GameMapData$Capital(
+								{
+									ctor: '_Tuple2',
+									_0: 'Tunis',
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Coast(''),
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'North Africa',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Western Mediterranean', _1: _user$project$GameMapData$Sea},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Tyrrhenian Sea', _1: _user$project$GameMapData$Sea},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: _user$project$GameMapData$Land,
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'North Africa', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											},
+											_1: {ctor: '[]'}
+										}
+									}
+								}),
+							_1: {
+								ctor: '::',
+								_0: _user$project$GameMapData$Capital(
+									{
+										ctor: '_Tuple2',
+										_0: 'Greece',
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: _user$project$GameMapData$Coast(''),
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Albania',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'Bulgaria',
+															_1: _user$project$GameMapData$Coast('South')
+														},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Aegean Sea', _1: _user$project$GameMapData$Sea},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: _user$project$GameMapData$Land,
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Albania', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Serbia', _1: _user$project$GameMapData$Land},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Bulgaria', _1: _user$project$GameMapData$Land},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												},
+												_1: {ctor: '[]'}
+											}
+										}
+									}),
+								_1: {
+									ctor: '::',
+									_0: _user$project$GameMapData$Capital(
+										{
+											ctor: '_Tuple2',
+											_0: 'Bulgaria',
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: _user$project$GameMapData$Coast('East'),
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: 'Romania',
+															_1: _user$project$GameMapData$Coast('')
+														},
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Constantinople',
+																_1: _user$project$GameMapData$Coast('')
+															},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Black Sea', _1: _user$project$GameMapData$Sea},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: _user$project$GameMapData$Coast('South'),
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Greece',
+																_1: _user$project$GameMapData$Coast('')
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'Constantinople',
+																	_1: _user$project$GameMapData$Coast('')
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Aegean Sea', _1: _user$project$GameMapData$Sea},
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: _user$project$GameMapData$Land,
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Rumania', _1: _user$project$GameMapData$Land},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Serbia', _1: _user$project$GameMapData$Land},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'Greece', _1: _user$project$GameMapData$Land},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Constantinople', _1: _user$project$GameMapData$Land},
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}
+															}
+														},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}),
+									_1: {
+										ctor: '::',
+										_0: _user$project$GameMapData$Capital(
+											{
+												ctor: '_Tuple2',
+												_0: 'Rumania',
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: _user$project$GameMapData$Coast(''),
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: 'Sevastopol',
+																_1: _user$project$GameMapData$Coast('')
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'Bulgaria',
+																	_1: _user$project$GameMapData$Coast('South')
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Black Sea', _1: _user$project$GameMapData$Sea},
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
+													},
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: _user$project$GameMapData$Land,
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Sevastopol', _1: _user$project$GameMapData$Land},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Ukraine', _1: _user$project$GameMapData$Land},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'Galicia', _1: _user$project$GameMapData$Land},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Budapest', _1: _user$project$GameMapData$Land},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'Serbia', _1: _user$project$GameMapData$Land},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'Bulgaria', _1: _user$project$GameMapData$Land},
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														},
+														_1: {ctor: '[]'}
+													}
+												}
+											}),
+										_1: {
+											ctor: '::',
+											_0: _user$project$GameMapData$Capital(
+												{
+													ctor: '_Tuple2',
+													_0: 'Serbia',
+													_1: {
+														ctor: '::',
+														_0: {
+															ctor: '_Tuple2',
+															_0: _user$project$GameMapData$Land,
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Budapest', _1: _user$project$GameMapData$Land},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Trieste', _1: _user$project$GameMapData$Land},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'Albania', _1: _user$project$GameMapData$Land},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Greece', _1: _user$project$GameMapData$Land},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'Bulgaria', _1: _user$project$GameMapData$Land},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'Rumania', _1: _user$project$GameMapData$Land},
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														},
+														_1: {ctor: '[]'}
+													}
+												}),
+											_1: {
+												ctor: '::',
+												_0: _user$project$GameMapData$Noncapital(
+													{
+														ctor: '_Tuple2',
+														_0: 'North Africa',
+														_1: {
+															ctor: '::',
+															_0: {
+																ctor: '_Tuple2',
+																_0: _user$project$GameMapData$Coast(''),
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: 'Tunis',
+																		_1: _user$project$GameMapData$Coast('')
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'Western Mediterranean', _1: _user$project$GameMapData$Sea},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}
+															},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: _user$project$GameMapData$Land,
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'Sevastopol', _1: _user$project$GameMapData$Land},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Tunis', _1: _user$project$GameMapData$Land},
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																},
+																_1: {ctor: '[]'}
+															}
+														}
+													}),
+												_1: {
+													ctor: '::',
+													_0: _user$project$GameMapData$Noncapital(
+														{
+															ctor: '_Tuple2',
+															_0: 'Albania',
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: _user$project$GameMapData$Coast(''),
+																	_1: {
+																		ctor: '::',
+																		_0: {
+																			ctor: '_Tuple2',
+																			_0: 'Trieste',
+																			_1: _user$project$GameMapData$Coast('')
+																		},
+																		_1: {
+																			ctor: '::',
+																			_0: {
+																				ctor: '_Tuple2',
+																				_0: 'Greece',
+																				_1: _user$project$GameMapData$Coast('')
+																			},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'Adriatic Sea', _1: _user$project$GameMapData$Sea},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	}
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: _user$project$GameMapData$Land,
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Trieste', _1: _user$project$GameMapData$Land},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'Serbia', _1: _user$project$GameMapData$Land},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'Greece', _1: _user$project$GameMapData$Land},
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}
+																	},
+																	_1: {ctor: '[]'}
+																}
+															}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$turkeyData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'Constantinople',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast(''),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Ankara',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Smyrna',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Bulgaria',
+									_1: _user$project$GameMapData$Coast('East')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Bulgaria',
+										_1: _user$project$GameMapData$Coast('South')
+									},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Black Sea', _1: _user$project$GameMapData$Sea},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Aegean Sea', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Bulgaria', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Ankara', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Smyrna', _1: _user$project$GameMapData$Land},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Ankara',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Coast(''),
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Constantinople',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Armenia',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Black Sea', _1: _user$project$GameMapData$Sea},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Constantinople', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Smyrna', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Armenia', _1: _user$project$GameMapData$Land},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'Smyrna',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Coast(''),
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Constantinople',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Syria',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Aegean Sea', _1: _user$project$GameMapData$Sea},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Eastern Mediterranean', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Land,
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Constantinople', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Ankara', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Armenia', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Syria', _1: _user$project$GameMapData$Land},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Noncapital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Armenia',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Coast(''),
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Ankara',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Sevastopol',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Black Sea', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Sevastopol', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Ankara', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Smyrna', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Syria', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Noncapital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Syria',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Coast(''),
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Smyrna',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Eastern Mediterranean', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Smyrna', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Armenia', _1: _user$project$GameMapData$Land},
+												_1: {ctor: '[]'}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$austriaHungaryData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'Trieste',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast(''),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Venice',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Albania',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Adriatic', _1: _user$project$GameMapData$Sea},
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Tyrolia', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Vienna', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Budapest', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Serbia', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Albania', _1: _user$project$GameMapData$Land},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Vienna',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Bohemia', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Galicia', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Budapest', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Trieste', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Tyrolia', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'Budapest',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Galicia', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Rumania', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Serbia', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Trieste', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Vienna', _1: _user$project$GameMapData$Land},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Noncapital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Tyrolia',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Land,
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Piedmont', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Bohemia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Vienna', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Trieste', _1: _user$project$GameMapData$Land},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Noncapital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Bohemia',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Tyrolia', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Silesia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Galicia', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Vienna', _1: _user$project$GameMapData$Land},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$GameMapData$Noncapital(
+							{
+								ctor: '_Tuple2',
+								_0: 'Galicia',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Bohemia', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Silesia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Warsaw', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Ukraine', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Rumania', _1: _user$project$GameMapData$Land},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Budapest', _1: _user$project$GameMapData$Land},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Vienna', _1: _user$project$GameMapData$Land},
+																	_1: {ctor: '[]'}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$italyData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'Venice',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast(''),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Trieste',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Apulia',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Adriatic Sea', _1: _user$project$GameMapData$Sea},
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Trieste', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Tyrolia', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Piedmont', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Tuscany', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Rome', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Rome',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Coast(''),
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Tuscany',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Naples',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Tyrrhenian Sea', _1: _user$project$GameMapData$Sea},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Tuscany', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Apulia', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Naples', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'Naples',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Coast(''),
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Rome',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Apulia',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Tyrrhenian Sea', _1: _user$project$GameMapData$Sea},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Land,
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Apulia', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Rome', _1: _user$project$GameMapData$Land},
+										_1: {ctor: '[]'}
+									}
+								}
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Noncapital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Piedmont',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Coast(''),
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Marseille',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Tuscany',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Gulf of Lyons', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Marseilles', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Tyrolia', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Tuscany', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Noncapital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Tuscany',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Coast(''),
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Piedmont',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Rome',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Gulf of Lyons', _1: _user$project$GameMapData$Sea},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Tyrrhenian Sea', _1: _user$project$GameMapData$Sea},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Piedmont', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Rome', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$GameMapData$Noncapital(
+							{
+								ctor: '_Tuple2',
+								_0: 'Tuscany',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Coast(''),
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Piedmont',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Rome',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Gulf of Lyons', _1: _user$project$GameMapData$Sea},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Tyrrhenian Sea', _1: _user$project$GameMapData$Sea},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Land,
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Piedmont', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Rome', _1: _user$project$GameMapData$Land},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										},
+										_1: {ctor: '[]'}
+									}
+								}
+							}),
+						_1: {
+							ctor: '::',
+							_0: _user$project$GameMapData$Noncapital(
+								{
+									ctor: '_Tuple2',
+									_0: 'Apulia',
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Coast(''),
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Naples',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Venice',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Adriatic Sea', _1: _user$project$GameMapData$Sea},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Ionian Sea', _1: _user$project$GameMapData$Sea},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: _user$project$GameMapData$Land,
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Naples', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Rome', _1: _user$project$GameMapData$Land},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											},
+											_1: {ctor: '[]'}
+										}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$russiaData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'St. Petersburg',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast('North'),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Norway',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Barents Sea', _1: _user$project$GameMapData$Sea},
+							_1: {ctor: '[]'}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Coast('South'),
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Finland',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Livonia',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Gulf of Bothnia', _1: _user$project$GameMapData$Sea},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Finland', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Norway', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Livonia', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Moscow', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Moscow',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'St. Petersburg', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Livonia', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Warsaw', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Ukraine', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Sevastopol', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'Warsaw',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Prussia', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Livonia', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Moscow', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Ukraine', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Galicia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Silesia', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Capital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Sevastopol',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Coast(''),
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Rumania',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Armenia',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Black Sea', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Finland', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Norway', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Livonia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Moscow', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Noncapital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Finland',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Coast(''),
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Sweden',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'St. Petersburg',
+												_1: _user$project$GameMapData$Coast('South')
+											},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Gulf of Bothnia', _1: _user$project$GameMapData$Sea},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Sweden', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Norway', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'St. Petersburg', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$GameMapData$Noncapital(
+							{
+								ctor: '_Tuple2',
+								_0: 'Livonia',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Coast(''),
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Prussia',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'St. Petersburg',
+													_1: _user$project$GameMapData$Coast('South')
+												},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Gulf of Bothnia', _1: _user$project$GameMapData$Sea},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Baltic Sea', _1: _user$project$GameMapData$Sea},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Land,
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Prussia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Warsaw', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Moscow', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'St. Petersburg', _1: _user$project$GameMapData$Land},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										},
+										_1: {ctor: '[]'}
+									}
+								}
+							}),
+						_1: {
+							ctor: '::',
+							_0: _user$project$GameMapData$Noncapital(
+								{
+									ctor: '_Tuple2',
+									_0: 'Ukraine',
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Land,
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Galicia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Warsaw', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Moscow', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Sevastopol', _1: _user$project$GameMapData$Land},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Rumania', _1: _user$project$GameMapData$Land},
+																_1: {ctor: '[]'}
+															}
+														}
+													}
+												}
+											}
+										},
+										_1: {ctor: '[]'}
+									}
+								}),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$germanyData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'Kiel',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast(''),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Berlin',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Holland',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Denmark',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Heligoland Bight', _1: _user$project$GameMapData$Sea},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Baltic Seas', _1: _user$project$GameMapData$Sea},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Berlin', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Denmark', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Holland', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Ruhr', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Berlin',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Coast(''),
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Kiel',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Prussia',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Baltic Sea', _1: _user$project$GameMapData$Sea},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Prussia', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Silesia', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Kiel', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'Munich',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Burgundy', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Ruhr', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Kiel', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Berlin', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Silesia', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Bohemia', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Tyrolia', _1: _user$project$GameMapData$Land},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Noncapital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Ruhr',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Land,
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Burgundy', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Belgium', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Holland', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Kiel', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}
+							},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Noncapital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Silesia',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Berlin', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Prussia', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Warsaw', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Galicia', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Bohemia', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$GameMapData$Noncapital(
+							{
+								ctor: '_Tuple2',
+								_0: 'Prussia',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Coast(''),
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Livonia',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'Belrin',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Baltic Sea', _1: _user$project$GameMapData$Sea},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Land,
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Berlin', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Silesia', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Warsaw', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Livonia', _1: _user$project$GameMapData$Land},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										},
+										_1: {ctor: '[]'}
+									}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$franceData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'Brest',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast(''),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Picardy',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Gascony',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'English Channel', _1: _user$project$GameMapData$Sea},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Picardy', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Gascony', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Paris', _1: _user$project$GameMapData$Land},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Marseilles',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Coast(''),
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Piedmont',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Spain',
+									_1: _user$project$GameMapData$Coast('South')
+								},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Gulf of Lyons', _1: _user$project$GameMapData$Sea},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Piedmont', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Spain', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Gascony', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Burgundy', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'Paris',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Picardy', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Brest', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Burgundy', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Gascony', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Noncapital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Picardy',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Coast(''),
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Belgium',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Brest',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'English Channel', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Belgium', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Brest', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Paris', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Burgundy', _1: _user$project$GameMapData$Land},
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Noncapital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Gascony',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Coast(''),
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Spain',
+											_1: _user$project$GameMapData$Coast('North')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Brest',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Mid-Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Brest', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Paris', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Burgundy', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Marseilles', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Spain', _1: _user$project$GameMapData$Land},
+															_1: {ctor: '[]'}
+														}
+													}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$GameMapData$Noncapital(
+							{
+								ctor: '_Tuple2',
+								_0: 'Burgundy',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Paris', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Gascony', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Marseilles', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Piedmont', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'Ruhr', _1: _user$project$GameMapData$Land},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'Belgium', _1: _user$project$GameMapData$Land},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'Picardy', _1: _user$project$GameMapData$Land},
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$englandData = {
+	ctor: '::',
+	_0: _user$project$GameMapData$Capital(
+		{
+			ctor: '_Tuple2',
+			_0: 'Edinburgh',
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _user$project$GameMapData$Coast(''),
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: 'Clyde',
+							_1: _user$project$GameMapData$Coast('')
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Yorkshire',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Norwegian Sea', _1: _user$project$GameMapData$Sea},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Land,
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Clyde', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Liverpool', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Yorkshire', _1: _user$project$GameMapData$Land},
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}),
+	_1: {
+		ctor: '::',
+		_0: _user$project$GameMapData$Capital(
+			{
+				ctor: '_Tuple2',
+				_0: 'Liverpool',
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _user$project$GameMapData$Coast(''),
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: 'Clyde',
+								_1: _user$project$GameMapData$Coast('')
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Wales',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Irish Sea', _1: _user$project$GameMapData$Sea},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'North Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Land,
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Clyde', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Edinburgh', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Yorkshire', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Wales', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {
+			ctor: '::',
+			_0: _user$project$GameMapData$Capital(
+				{
+					ctor: '_Tuple2',
+					_0: 'London',
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _user$project$GameMapData$Coast(''),
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: 'Wales',
+									_1: _user$project$GameMapData$Coast('')
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Yorkshire',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'English Channel', _1: _user$project$GameMapData$Sea},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Land,
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: 'Yorkshire', _1: _user$project$GameMapData$Land},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Wales', _1: _user$project$GameMapData$Land},
+										_1: {ctor: '[]'}
+									}
+								}
+							},
+							_1: {ctor: '[]'}
+						}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _user$project$GameMapData$Noncapital(
+					{
+						ctor: '_Tuple2',
+						_0: 'Clyde',
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _user$project$GameMapData$Coast(''),
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Edinburgh',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Liverpool',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Atlantic Ocean', _1: _user$project$GameMapData$Sea},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Norwegian Sea', _1: _user$project$GameMapData$Sea},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								}
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Land,
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: 'Edinburgh', _1: _user$project$GameMapData$Land},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Liverpool', _1: _user$project$GameMapData$Land},
+											_1: {ctor: '[]'}
+										}
+									}
+								},
+								_1: {ctor: '[]'}
+							}
+						}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$GameMapData$Noncapital(
+						{
+							ctor: '_Tuple2',
+							_0: 'Yorkshire',
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _user$project$GameMapData$Coast(''),
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'Edinburgh',
+											_1: _user$project$GameMapData$Coast('')
+										},
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'London',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'North Sea', _1: _user$project$GameMapData$Sea},
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Land,
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Edinburgh', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Liverpool', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Wales', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'London', _1: _user$project$GameMapData$Land},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									},
+									_1: {ctor: '[]'}
+								}
+							}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$GameMapData$Noncapital(
+							{
+								ctor: '_Tuple2',
+								_0: 'Wales',
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: _user$project$GameMapData$Coast(''),
+										_1: {
+											ctor: '::',
+											_0: {
+												ctor: '_Tuple2',
+												_0: 'Liverpool',
+												_1: _user$project$GameMapData$Coast('')
+											},
+											_1: {
+												ctor: '::',
+												_0: {
+													ctor: '_Tuple2',
+													_0: 'London',
+													_1: _user$project$GameMapData$Coast('')
+												},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Irish Sea', _1: _user$project$GameMapData$Sea},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'English Channel', _1: _user$project$GameMapData$Sea},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: _user$project$GameMapData$Land,
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Liverpool', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'Yorkshire', _1: _user$project$GameMapData$Land},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'London', _1: _user$project$GameMapData$Land},
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										},
+										_1: {ctor: '[]'}
+									}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$mapData = {
+	ctor: '::',
+	_0: {
+		ctor: '_Tuple2',
+		_0: _elm_lang$core$Maybe$Just('England'),
+		_1: _user$project$Europe$englandData
+	},
+	_1: {
+		ctor: '::',
+		_0: {
+			ctor: '_Tuple2',
+			_0: _elm_lang$core$Maybe$Just('France'),
+			_1: _user$project$Europe$franceData
+		},
+		_1: {
+			ctor: '::',
+			_0: {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Maybe$Just('Germany'),
+				_1: _user$project$Europe$germanyData
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: _elm_lang$core$Maybe$Just('Russia'),
+					_1: _user$project$Europe$russiaData
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Maybe$Just('Italy'),
+						_1: _user$project$Europe$italyData
+					},
+					_1: {
+						ctor: '::',
+						_0: {
+							ctor: '_Tuple2',
+							_0: _elm_lang$core$Maybe$Just('AustriaHungary'),
+							_1: _user$project$Europe$austriaHungaryData
+						},
+						_1: {
+							ctor: '::',
+							_0: {
+								ctor: '_Tuple2',
+								_0: _elm_lang$core$Maybe$Just('Turkey'),
+								_1: _user$project$Europe$turkeyData
+							},
+							_1: {
+								ctor: '::',
+								_0: {
+									ctor: '_Tuple2',
+									_0: _elm_lang$core$Maybe$Nothing,
+									_1: A2(_elm_lang$core$Basics_ops['++'], _user$project$Europe$nothingData, _user$project$Europe$seas)
+								},
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$turnOrder = {
+	ctor: '::',
+	_0: 'England',
+	_1: {
+		ctor: '::',
+		_0: 'France',
+		_1: {
+			ctor: '::',
+			_0: 'Germany',
+			_1: {
+				ctor: '::',
+				_0: 'Russia',
+				_1: {
+					ctor: '::',
+					_0: 'Italy',
+					_1: {
+						ctor: '::',
+						_0: 'AustriaHungary',
+						_1: {
+							ctor: '::',
+							_0: 'Turkey',
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$startingPieces = {
+	ctor: '::',
+	_0: {
+		ctor: '_Tuple2',
+		_0: 'London',
+		_1: _user$project$GameMapData$Coast('')
+	},
+	_1: {
+		ctor: '::',
+		_0: {
+			ctor: '_Tuple2',
+			_0: 'Edinburgh',
+			_1: _user$project$GameMapData$Coast('')
+		},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: 'Liverpool', _1: _user$project$GameMapData$Land},
+			_1: {
+				ctor: '::',
+				_0: {
+					ctor: '_Tuple2',
+					_0: 'Brest',
+					_1: _user$project$GameMapData$Coast('')
+				},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'Paris', _1: _user$project$GameMapData$Land},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'Marseilles', _1: _user$project$GameMapData$Land},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'Munich', _1: _user$project$GameMapData$Land},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: 'Berlin', _1: _user$project$GameMapData$Land},
+								_1: {
+									ctor: '::',
+									_0: {
+										ctor: '_Tuple2',
+										_0: 'Kiel',
+										_1: _user$project$GameMapData$Coast('')
+									},
+									_1: {
+										ctor: '::',
+										_0: {
+											ctor: '_Tuple2',
+											_0: 'St. Petersburg',
+											_1: _user$project$GameMapData$Coast('South')
+										},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'Moscow', _1: _user$project$GameMapData$Land},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'Warsaw', _1: _user$project$GameMapData$Land},
+												_1: {
+													ctor: '::',
+													_0: {
+														ctor: '_Tuple2',
+														_0: 'Sevastopol',
+														_1: _user$project$GameMapData$Coast('')
+													},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'Venice', _1: _user$project$GameMapData$Land},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'Rome', _1: _user$project$GameMapData$Land},
+															_1: {
+																ctor: '::',
+																_0: {
+																	ctor: '_Tuple2',
+																	_0: 'Naples',
+																	_1: _user$project$GameMapData$Coast('')
+																},
+																_1: {
+																	ctor: '::',
+																	_0: {
+																		ctor: '_Tuple2',
+																		_0: 'Trieste',
+																		_1: _user$project$GameMapData$Coast('')
+																	},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'Vienna', _1: _user$project$GameMapData$Land},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'Budapest', _1: _user$project$GameMapData$Land},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'Constantinople', _1: _user$project$GameMapData$Land},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'Smyrna', _1: _user$project$GameMapData$Land},
+																					_1: {
+																						ctor: '::',
+																						_0: {
+																							ctor: '_Tuple2',
+																							_0: 'Ankara',
+																							_1: _user$project$GameMapData$Coast('')
+																						},
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+};
+var _user$project$Europe$gameMapData = {mapData: _user$project$Europe$mapData, startingPieces: _user$project$Europe$startingPieces, turnOrder: _user$project$Europe$turnOrder};

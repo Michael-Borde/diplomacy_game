@@ -1,4 +1,16 @@
-module Gameboard exposing (Gameboard, Date, Phase, Turn, RetreatDirective, MoveDirective, BuildDirective, DisbandDirective, freshGameboard, nextTurn)
+module Gameboard exposing (
+    Gameboard, 
+    Date, 
+    Phase, 
+    Turn, 
+    RetreatDirective, 
+    MoveDirective, 
+    BuildDirective, 
+    DisbandDirective, 
+    freshGameboard, 
+    nextTurn,
+    getTurnAsString,
+    getPhaseAsString)
 
 import Map exposing (Map)
 import GameMap exposing (..)
@@ -99,9 +111,14 @@ addDisbandDirective : DisbandDirective -> DisbandDirectives -> DisbandDirectives
 addDisbandDirective (p, b) = Map.set p b
 
 nextTurn : Gameboard -> Gameboard
-nextTurn gb = case gb.turn of
-    [] -> nextPhase gb
-    _::es -> { gb | turn = es}
+nextTurn gb = 
+    let
+        _ = Debug.log "Gameboard.nextTurn"
+    in
+        case gb.turn of
+            [] -> Debug.crash "no empires??"
+            [_] -> nextPhase gb
+            _::es -> { gb | turn = es}
 
 nextPhase : Gameboard -> Gameboard
 nextPhase gb = case gb.phase of
@@ -149,3 +166,14 @@ applyRetreats rinfo gb = gb
 
 applyBuildDirectives : BuildInfo -> Gameboard -> Gameboard
 applyBuildDirectives bds gb = gb
+
+getTurnAsString : Gameboard -> String
+getTurnAsString gb = case gb.turn of
+    [] -> Debug.crash "no empire??"
+    e::_ -> getEmpireString e
+
+getPhaseAsString : Gameboard -> String
+getPhaseAsString gb = case gb.phase of
+    Build _ -> "Build"
+    Move _ -> "Move"
+    Retreat _ -> "Retreat"

@@ -12,7 +12,8 @@ module GameMap exposing (
     getNaturalOwner, 
     isCapital, 
     getStartingPieces,
-    getEmpireTurnOrder)
+    getEmpireTurnOrder,
+    getEmpireString)
 
 import GameMapData as GMD
 
@@ -158,3 +159,6 @@ crashIfNothing ma =
 
 getEmpireTurnOrder : GMD.GameMapData -> List Empire
 getEmpireTurnOrder = .turnOrder >> List.map Empire
+
+getEmpireString : Empire -> String
+getEmpireString (Empire e) = e

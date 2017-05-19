@@ -2,7 +2,6 @@ module Main exposing (main)
 
 import Gameboard exposing (..)
 import GameMap exposing (..)
--- import GameMapData exposing (..)
 
 import Html exposing (Html)
 
@@ -33,16 +32,18 @@ init = (initialModel, Cmd.none)
 
 initialModel : Model
 initialModel =
-    { gameboard : freshGameboard }
+    { gameboard = freshGameboard }
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Debug.crash "TODO"
 
 update : Msg -> Model -> (Model, Cmd Msg)
-update msg model =
-    Debug.crash "TODO"
+update msg model = (model, Cmd.none)
 
 view : Model -> Html Msg
 view model =
-    Debug.crash "TODO"
+    case model.gameboard.phase of
+        Move _ ->
+        Retreat _ ->
+        Build _ -> 

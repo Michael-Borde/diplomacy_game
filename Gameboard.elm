@@ -8,11 +8,11 @@ import Europe as TheMap
 
 type alias Gameboard =
     { gameMap : GameMap
+    , turnOrder : Turn
     , date : Date
     , phase : Phase
     , turn : Turn
     , pieces : List Piece
-    , convoyedPieces : List Piece
     , supplyCenters : Map SupplyCenterID (Maybe Empire)
     }
 
@@ -69,14 +69,22 @@ type alias DisbandDirective
 freshGameboard : Gameboard
 freshGameboard =
     let
-        gameMap = GameMap.convert TheMap.gameMapData
+        gmd = TheMap.gameMapData
+        gameMap = GameMap.convert gmd
+        turnOrder = GameMap.getEmpireTurnOrder gmd
         date = Spring 1900
         phase = Move Map.empty
-        turn = freshTurn
-        pieces = getStartingPieces gameMap TheMap.gameMapData
+        turn = turnOrder
+        pieces = getStartingPieces gameMap gmd
         supplyCenters = Map.empty
     in
-        { gameMap = gameMap, date = date, phase = phase, turn = turn, pieces = pieces, supplyCenters = supplyCenters}
+        { gameMap = gameMap
+        , turnOrder = turnOrder
+        , date = date
+        , phase = phase
+        , turn = turn
+        , pieces = pieces
+        , supplyCenters = supplyCenters}
 
 updateMoveDirectives : MoveDirective -> MoveDirectives -> MoveDirectives
 updateMoveDirectives (p, mc) = Map.set p mc
@@ -131,10 +139,7 @@ freshBuildPhase gb =
 
 
 refreshTurn : Gameboard -> Gameboard
-refreshTurn gb = { gb | turn = freshTurn }
-
-freshTurn : Turn
-freshTurn = [England, France, Germany, Russia, Italy, Turkey, AustriaHungary]
+refreshTurn gb = { gb | turn = gb.turnOrder }
 
 applyMoveDirectives : MoveDirectives -> Gameboard -> (Gameboard, List Piece)
 applyMoveDirectives mds gb = (gb, []) 

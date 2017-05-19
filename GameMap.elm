@@ -1,9 +1,22 @@
-module GameMap exposing (GameMap, Piece, Empire, SupplyCenterID, ProvinceID, LocationID(..),
-    canMove, convert, getAdjacencies, getLocations, getNaturalOwner, isCapital, getStartingPieces)
+module GameMap exposing (
+    GameMap, 
+    Piece, 
+    Empire, 
+    SupplyCenterID, 
+    ProvinceID, 
+    LocationID(..),
+    canMove, 
+    convert, 
+    getAdjacencies, 
+    getLocations, 
+    getNaturalOwner, 
+    isCapital, 
+    getStartingPieces,
+    getEmpireTurnOrder)
 
 import GameMapData as GMD
 
-type alias Empire = GMD.Empire
+type Empire = Empire String
 
 type alias GameMap = List Location
 
@@ -83,10 +96,10 @@ convert : GMD.GameMapData -> GameMap
 convert gmd =
     List.concat (List.map processEmpire gmd.mapData)
 
-processEmpire : (Maybe Empire, GMD.LandData) -> List Location
-processEmpire (empire, provinces) =
+processEmpire : (Maybe GMD.EmpireID, GMD.LandData) -> List Location
+processEmpire (maybeEmpireID, provinces) =
     let locations = List.concat (List.map processProvinceData provinces) in
-    List.map (\loc -> { loc | empire = empire }) locations
+    List.map (\loc -> { loc | empire = Maybe.map Empire maybeEmpireID }) locations
 
 processProvinceData : GMD.ProvinceData -> List Location
 processProvinceData pdata =
@@ -103,7 +116,7 @@ newLocation pid (locid, adj) =
 
 convertLocationID : (GMD.ProvinceID, GMD.LocationID) -> LocationID
 convertLocationID (pid, lid) =
-    case lid of
+    case lid of 
         GMD.Coast ""    -> Coast pid
         GMD.Coast name  -> Coast (pid ++ " " ++ name)
         GMD.Land        -> Land pid
@@ -140,3 +153,8 @@ crashIfNothing ma =
     case ma of
         Just a -> a
         Nothing -> Debug.crash "Crash if Nothing"
+
+------------------------------------
+
+getEmpireTurnOrder : GMD.GameMapData -> List Empire
+getEmpireTurnOrder = .turnOrder >> List.map Empire

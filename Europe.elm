@@ -1,12 +1,12 @@
 module Europe exposing (gameMapData)
 
-
-import GameMapData exposing (GameMapData, Piece, MapData, Empire(..), LocationID(..), ProvinceData(..))
+import GameMapData exposing (GameMapData, EmpireID, Piece, MapData, LocationID(..), ProvinceData(..))
 
 gameMapData : GameMapData
 gameMapData = 
     { mapData = mapData
     , startingPieces = startingPieces
+    , turnOrder = turnOrder 
     }
 
 startingPieces : List Piece
@@ -35,15 +35,18 @@ startingPieces =
     , ("Ankara", Coast "")
     ]
 
+turnOrder : List EmpireID
+turnOrder = ["England", "France", "Germany", "Russia", "Italy", "AustriaHungary", "Turkey"] 
+
 mapData : MapData
 mapData = 
-    [ (Just England, englandData)
-    , (Just France, franceData)
-    , (Just Germany, germanyData)
-    , (Just Russia, russiaData)
-    , (Just Italy, italyData)
-    , (Just AustriaHungary, austriaHungaryData)
-    , (Just Turkey, turkeyData)
+    [ (Just "England", englandData)
+    , (Just "France", franceData)
+    , (Just "Germany", germanyData)
+    , (Just "Russia", russiaData)
+    , (Just "Italy", italyData)
+    , (Just "AustriaHungary", austriaHungaryData)
+    , (Just "Turkey", turkeyData)
     , (Nothing, nothingData ++ seas)
     ]
 

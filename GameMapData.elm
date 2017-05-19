@@ -1,4 +1,4 @@
-module GameMapData exposing (GameMapData, Empire(..))
+module GameMapData exposing (GameMapData, Empire(..), ProvinceData(..), LocationID(..))
 
 type Empire
     = England
@@ -18,9 +18,6 @@ type ProvinceData
     | Noncapital ProvinceInfo
 
 type alias Location = (LocationID, Adjacencies)
-    = Coast LocationID Adjacencies
-    | Land LocationID Adjacencies
-    | Sea LocationID Adjacencies
 
 type LocationID
     = Coast String
@@ -29,5 +26,4 @@ type LocationID
 
 type alias ProvinceInfo = (ProvinceID, List Location)
 type alias ProvinceID = String
-type alias LocationID = String
 type alias Adjacencies = List (ProvinceID, LocationID)

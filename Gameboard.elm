@@ -69,11 +69,11 @@ type alias DisbandDirective
 freshGameboard : Gameboard
 freshGameboard =
     let
-        gameMap = GameMap.convert TheMap.mapData
+        gameMap = GameMap.convert TheMap.gameMapData
         date = Spring 1900
         phase = Move Map.empty
         turn = freshTurn
-        pieces = getStartingPieces gameMap
+        pieces = getStartingPieces gameMap TheMap.gameMapData
         supplyCenters = Map.empty
     in
         { gameMap = gameMap, date = date, phase = phase, turn = turn, pieces = pieces, supplyCenters = supplyCenters}

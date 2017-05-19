@@ -1,5 +1,6 @@
 module Europe exposing (gameMapData)
 
+
 import GameMapData exposing (GameMapData, Piece, MapData, Empire(..), LocationID(..), ProvinceData(..))
 
 gameMapData : GameMapData
@@ -9,7 +10,30 @@ gameMapData =
     }
 
 startingPieces : List Piece
-startingPieces = []
+startingPieces = 
+    [ ("London", Coast "")
+    , ("Edinburgh", Coast "")
+    , ("Liverpool", Land)
+    , ("Brest", Coast "")
+    , ("Paris", Land)
+    , ("Marseilles", Land)
+    , ("Munich", Land)
+    , ("Berlin", Land)
+    , ("Kiel", Coast "")
+    , ("St. Petersburg", Coast "South")
+    , ("Moscow", Land)
+    , ("Warsaw", Land)
+    , ("Sevastopol", Coast "")
+    , ("Venice", Land)
+    , ("Rome", Land)
+    , ("Naples", Coast "")
+    , ("Trieste", Coast "")
+    , ("Vienna", Land)
+    , ("Budapest", Land)
+    , ("Constantinople", Land)
+    , ("Smyrna", Land)
+    , ("Ankara", Coast "")
+    ]
 
 mapData : MapData
 mapData = 

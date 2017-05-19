@@ -1,9 +1,18 @@
-module Europe exposing (theMapData)
+module Europe exposing (gameMapData)
 
-import GameMapData exposing (GameMapData, Empire(..), LocationID(..), ProvinceData(..))
+import GameMapData exposing (GameMapData, Piece, MapData, Empire(..), LocationID(..), ProvinceData(..))
 
-theMapData : GameMapData
-theMapData = 
+gameMapData : GameMapData
+gameMapData = 
+    { mapData = mapData
+    , startingPieces = startingPieces
+    }
+
+startingPieces : List Piece
+startingPieces = []
+
+mapData : MapData
+mapData = 
     [ (Just England, englandData)
     , (Just France, franceData)
     , (Just Germany, germanyData)

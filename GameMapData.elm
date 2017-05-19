@@ -1,4 +1,5 @@
-module GameMapData exposing (GameMapData, Empire(..), ProvinceData(..), LocationID(..), Adjacencies, Location, LandData, ProvinceData)
+module GameMapData exposing (GameMapData, Empire(..), ProvinceData(..), LocationID(..), 
+    Piece, MapData, Adjacencies, Location, LandData, ProvinceData)
 
 type Empire
     = England
@@ -9,7 +10,15 @@ type Empire
     | Turkey
     | AustriaHungary
 
-type alias GameMapData = List (Maybe Empire, LandData)
+
+type alias Piece = (ProvinceID, LocationID)
+
+type alias GameMapData = 
+    { mapData : MapData
+    , startingPieces : List Piece
+    }
+
+type alias MapData = List (Maybe Empire, LandData)
 
 type alias LandData = List ProvinceData
 

@@ -1,7 +1,9 @@
-module GameMap exposing (Piece, SupplyCenterID, ProvinceID, LocationID(..), canMove, convert, getAdjacencies)
+module GameMap exposing (Piece, Empire, SupplyCenterID, ProvinceID, LocationID(..), 
+    canMove, convert, getAdjacencies, getLocations, getNaturalOwner, isCapital, getStartingPieces)
 
-import GameMapData as GMD exposing (Empire)
+import GameMapData as GMD
 
+type alias Empire = GMD.Empire
 
 type alias GameMap = List Location
 
@@ -66,16 +68,17 @@ getProvinceID gm lid =
 
 isCapital : GameMap -> LocationID -> Bool
 isCapital gm lid =
-    let province = getProvince gm lid in
+    let province = getProvinceID gm lid in
     case province of
         Capital _       -> True
         Noncapital _    -> False
 
-getLocations : GameMap -> ProvinceID -> Bool
+getLocations : GameMap -> ProvinceID -> List Location
 getLocations gm pid =
     List.filter (\loc -> loc.pid == pid) gm
 
-
+getStartingPieces : GameMap -> List Piece
+getStartingPieces gm = Debug.crash "TODO"
 
 -------------------------------------------------------
 

@@ -1,15 +1,18 @@
 module Gameboard exposing (Gameboard, Date, Phase, Turn, RetreatDirective, MoveDirective, BuildDirective, DisbandDirective, freshGameboard, nextTurn)
 
-
-import GameMapData exposing (Empire(..))
 import Map exposing (Map)
 import GameMap exposing (..)
 
+import Europe as TheMap
+
+
 type alias Gameboard =
-    { date : Date
+    { gameMap : GameMap
+    , date : Date
     , phase : Phase
     , turn : Turn
     , pieces : List Piece
+    , convoyedPieces : List Piece
     , supplyCenters : Map SupplyCenterID (Maybe Empire)
     }
 
@@ -43,6 +46,7 @@ type MoveCommand
     = Hold
     | Advance LocationID 
     | Support ProvinceID
+    | Convoy (Piece, ProvinceID)
 
 type alias RetreatDirectives
     = Map Piece LocationID
@@ -65,14 +69,14 @@ type alias DisbandDirective
 freshGameboard : Gameboard
 freshGameboard =
     let
+        gameMap = GameMap.convert TheMap.mapData
         date = Spring 1900
         phase = Move Map.empty
         turn = freshTurn
-        pieces = [
-        ]
+        pieces = getStartingPieces gameMap
         supplyCenters = Map.empty
     in
-        { date = date, phase = phase, turn = turn, pieces = pieces, supplyCenters = supplyCenters}
+        { gameMap = gameMap, date = date, phase = phase, turn = turn, pieces = pieces, supplyCenters = supplyCenters}
 
 updateMoveDirectives : MoveDirective -> MoveDirectives -> MoveDirectives
 updateMoveDirectives (p, mc) = Map.set p mc
@@ -81,7 +85,7 @@ updateRetreatDirectives : RetreatDirective -> RetreatDirectives -> RetreatDirect
 updateRetreatDirectives (p, scid) = Map.set p scid
 
 addBuildDirective : BuildDirective -> BuildDirectives -> BuildDirectives
-addBuildDirective (tid, mp) = Map.set tid mp
+addBuildDirective (sid, mp) = Map.set sid mp
 
 addDisbandDirective : DisbandDirective -> DisbandDirectives -> DisbandDirectives
 addDisbandDirective (p, b) = Map.set p b

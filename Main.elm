@@ -33,7 +33,7 @@ init = (initialModel, Cmd.none)
 
 initialModel : Model
 initialModel =
-    { gameboard = freshGameboard }
+    { gameboard : freshGameboard }
 
 subscriptions : Model -> Sub Msg
 subscriptions model =

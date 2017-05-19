@@ -84,6 +84,7 @@ newLocation pid (locid, adj) =
 convertLocationID : GMD.LocationID -> String -> LocationID
 convertLocationID loc provinceName =
     case loc of
+        GMD.Coast ""    -> Coast provinceName
         GMD.Coast name  -> Coast (provinceName ++ " " ++ name)
         GMD.Land        -> Land provinceName
         GMD.Sea         -> Sea provinceName

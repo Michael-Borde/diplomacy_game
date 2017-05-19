@@ -49,7 +49,7 @@ update msg model = case msg of
         let
             gameboard = nextTurn model.gameboard
         in
-            ({ model | gameboard = gameboard}, Cmd.none)
+            ({ model | selectedPiece = Nothing, selectedSupplyCenter = Nothing, gameboard = gameboard}, Cmd.none)
     SelectPiece p ->
         ({ model | selectedPiece = Just p}, Cmd.none)
     SelectSupplyCenter scid ->
@@ -97,7 +97,7 @@ viewActors gb =
             getPieces gb |> List.map
                  (\p -> button [ onClick (SelectPiece p)] [ text (toString p)])
         _ ->
-            Debug.crash "TODO"
+            []
 
 viewCommandPanel : Model -> List (Html Msg)
 viewCommandPanel m =
@@ -109,7 +109,7 @@ viewCommandPanel m =
             Just p -> getMoveCommands gb p |> List.map
                  (\mc -> button [ onClick (SelectMove (p, mc))] [ text (toString mc)])
         _ ->
-            Debug.crash "TODO"
+            []
 
 endTurnButton : Html Msg
 endTurnButton = button [ onClick EndTurn ] [ text "End Turn" ]

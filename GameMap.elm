@@ -5,6 +5,8 @@ module GameMap exposing (
     SupplyCenterID, 
     ProvinceID, 
     LocationID(..),
+    getMoves,
+    getProvinceID,
     canMove, 
     convert, 
     getAdjacencies, 
@@ -13,7 +15,8 @@ module GameMap exposing (
     isCapital, 
     getStartingPieces,
     getEmpireTurnOrder,
-    getEmpireString)
+    getEmpireString,
+    owns)
 
 import GameMapData as GMD
 
@@ -162,3 +165,10 @@ getEmpireTurnOrder = .turnOrder >> List.map Empire
 
 getEmpireString : Empire -> String
 getEmpireString (Empire e) = e
+
+------------------------------------
+
+owns : Empire -> Piece -> Bool
+owns e p = case p of
+    Fleet info -> info.empire == e 
+    Army info -> info.empire == e 

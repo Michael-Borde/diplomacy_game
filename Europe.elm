@@ -36,7 +36,7 @@ startingPieces =
     ]
 
 turnOrder : List EmpireID
-turnOrder = ["England", "France", "Germany", "Russia", "Italy", "AustriaHungary", "Turkey"] 
+turnOrder = ["England", "France", "Germany", "Russia", "Italy", "Austria-Hungary", "Turkey"] 
 
 mapData : MapData
 mapData = 
@@ -45,7 +45,7 @@ mapData =
     , (Just "Germany", germanyData)
     , (Just "Russia", russiaData)
     , (Just "Italy", italyData)
-    , (Just "AustriaHungary", austriaHungaryData)
+    , (Just "Austria-Hungary", austriaHungaryData)
     , (Just "Turkey", turkeyData)
     , (Nothing, nothingData ++ seas)
     ]

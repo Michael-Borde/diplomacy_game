@@ -1,7 +1,7 @@
 module Gameboard exposing (
     Gameboard, 
     Date, 
-    Phase, 
+    Phase(..), 
     Turn, 
     RetreatDirective, 
     MoveDirective, 
@@ -10,7 +10,9 @@ module Gameboard exposing (
     freshGameboard, 
     nextTurn,
     getTurnAsString,
-    getPhaseAsString)
+    getPhaseAsString,
+    getPieces,
+    getMoveCommands)
 
 import Map exposing (Map)
 import GameMap exposing (..)
@@ -167,13 +169,34 @@ applyRetreats rinfo gb = gb
 applyBuildDirectives : BuildInfo -> Gameboard -> Gameboard
 applyBuildDirectives bds gb = gb
 
-getTurnAsString : Gameboard -> String
-getTurnAsString gb = case gb.turn of
+getEmpire : Gameboard -> Empire
+getEmpire gb = case gb.turn of
     [] -> Debug.crash "no empire??"
-    e::_ -> getEmpireString e
+    e::_ -> e
+
+getTurnAsString : Gameboard -> String
+getTurnAsString = (getEmpire >> getEmpireString >> \s -> s ++ "'s Turn")
 
 getPhaseAsString : Gameboard -> String
-getPhaseAsString gb = case gb.phase of
-    Build _ -> "Build"
-    Move _ -> "Move"
-    Retreat _ -> "Retreat"
+getPhaseAsString gb = 
+    let
+        phase = case gb.phase of
+            Build _ -> "Build"
+            Move _ -> "Move"
+            Retreat _ -> "Retreat"
+    in
+        phase ++ " Phase"
+
+getPieces : Gameboard  -> List Piece
+getPieces gb = 
+    let empire = getEmpire gb in
+    List.filter (owns empire) gb.pieces
+
+
+getMoveCommands : Gameboard -> Piece -> List (MoveCommand)
+getMoveCommands gb p =
+    let
+        moves = List.map Advance (getMoves gb.gameMap p)
+        supports = List.map (getProvinceID gb.gameMap >> Support) (getMoves gb.gameMap p)
+    in
+        [Hold] ++ moves ++ supports

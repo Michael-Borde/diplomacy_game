@@ -1,6 +1,6 @@
-module GameMap exposing (Piece, SupplyCenterID, ProvinceID, LocationID, canMove)
+module GameMap exposing (Piece, SupplyCenterID, ProvinceID, LocationID(..), canMove, convert, getAdjacencies)
 
-import GameMapData
+import GameMapData as GMD exposing (Empire)
 
 
 type alias GameMap = List Location
@@ -59,41 +59,41 @@ getMoves gm p = getAdjacencies gm (getPieceInfo p).location
 canMove : GameMap -> Piece -> LocationID -> Bool
 canMove gm p lid = List.member lid <| getAdjacencies gm (getPieceInfo p).location
 
-convert : GameMapData -> GameMap
+convert : GMD.GameMapData -> GameMap
 convert gmd =
     List.concat (List.map processEmpire gmd)
 
-processEmpire : (Maybe Empire, GameMapData.LandData) -> List Location
+processEmpire : (Maybe Empire, GMD.LandData) -> List Location
 processEmpire (empire, provinces) =
     let locations = List.concat (List.map processProvinceData provinces) in
     List.map (\loc -> { loc | empire = empire }) locations
 
-processProvinceData : ProvinceData -> List Location
+processProvinceData : GMD.ProvinceData -> List Location
 processProvinceData pdata =
     case pdata of
-        Capital (pid, locs) -> List.map (newLocation (Capital pid)) locs
-        | Noncapital (pid, locs) -> List.map (newLocation (Noncapital pid)) locs
+        GMD.Capital (pid, locs) -> List.map (newLocation (Capital <| SupplyCenter pid)) locs
+        GMD.Noncapital (pid, locs) -> List.map (newLocation (Noncapital pid)) locs
 
-newLocation : ProvinceID -> GameMapData.Location -> Location
+newLocation : ProvinceID -> GMD.Location -> Location
 newLocation pid (locid, adj) =
     { lid = convertLocationID locid (provinceIDtoString pid)
     , empire = Nothing
     , pid = pid
     , adjancies = convertAdjacencies adj }
 
-convertLocationID : GameMapData.LocationID -> String -> LocationId
+convertLocationID : GMD.LocationID -> String -> LocationID
 convertLocationID loc provinceName =
     case loc of
-        Coast name  -> Coast (provinceName + " " + name)
-        | Land      -> Land provinceName
-        | Sea       -> Sea provinceName
+        GMD.Coast name  -> Coast (provinceName ++ " " ++ name)
+        GMD.Land        -> Land provinceName
+        GMD.Sea         -> Sea provinceName
 
-convertAdjacencies : GameMapData.Adjacencies -> List LocationID
+convertAdjacencies : GMD.Adjacencies -> List LocationID
 convertAdjacencies adj =
     List.map (\x -> convertLocationID (Tuple.second x) (Tuple.first x)) adj
 
 provinceIDtoString : ProvinceID -> String
 provinceIDtoString pid =
     case pid of
-        Capital name -> name
+        Capital (SupplyCenter name) -> name
         Noncapital name -> name

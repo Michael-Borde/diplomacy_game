@@ -1,4 +1,4 @@
-module GameMapData exposing (GameMapData, Empire(..), ProvinceData(..), LocationID(..))
+module GameMapData exposing (GameMapData, Empire(..), ProvinceData(..), LocationID(..), Adjacencies, Location, LandData, ProvinceData)
 
 type Empire
     = England

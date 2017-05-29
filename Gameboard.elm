@@ -60,7 +60,7 @@ type MoveCommand
     = Hold
     | Advance LocationID
     | Support ( Piece, ProvinceID )
-    | Convoy ( Piece, LocationID )
+    | Convoy ( Piece, ProvinceID )
 
 
 type alias RetreatDirectives =
@@ -111,6 +111,11 @@ getAdjacentPieces gb pid =
     List.filter (\p -> canMoveToProvince gb.gameMap p pid) gb.pieces
 
 
+isOccupied : Gameboard -> ProvinceID -> Bool
+isOccupied gb pid =
+    List.any (\p -> getProvinceIDOfPiece gb.gameMap p == pid) gb.pieces
+
+
 getOccupant : Gameboard -> ProvinceID -> Maybe Piece
 getOccupant gb pid =
     firstTo (\p -> getProvinceIDOfPiece gb.gameMap p == pid) gb.pieces
@@ -119,3 +124,48 @@ getOccupant gb pid =
 getSupplyCenterIDsOfCurrentEmpire : Gameboard -> List SupplyCenterID
 getSupplyCenterIDsOfCurrentEmpire gb =
     getSupplyCenterIDsOfEmpire gb.gameMap (getCurrentEmpire gb)
+
+
+isSupport : MoveCommand -> Bool
+isSupport mc =
+    case mc of
+        Support _ ->
+            True
+
+        _ ->
+            False
+
+
+isHold : MoveCommand -> Bool
+isHold mc =
+    case mc of
+        Hold ->
+            True
+
+        _ ->
+            False
+
+
+isAdvance : MoveCommand -> Bool
+isAdvance mc =
+    case mc of
+        Advance _ ->
+            True
+
+        _ ->
+            False
+
+
+isConvoy : MoveCommand -> Bool
+isConvoy mc =
+    case mc of
+        Convoy _ ->
+            True
+
+        _ ->
+            False
+
+
+getCommand : MoveDirectives -> Piece -> MoveCommand
+getCommand mds p =
+    Maybe.withDefault Hold <| get p mds

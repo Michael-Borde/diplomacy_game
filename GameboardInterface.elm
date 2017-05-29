@@ -207,14 +207,38 @@ countPieces gb =
         numPieces
 
 
+countDisbands : Gameboard -> Int
+countDisbands gb =
+    case gb.phase of
+        Build binfo ->
+            asList binfo.disbandDirectives
+                |> List.filter (\( _, b ) -> b)
+                |> List.length
+
+        _ ->
+            0
+
+
+countBuilds : Gameboard -> Int
+countBuilds gb =
+    case gb.phase of
+        Build binfo ->
+            asList binfo.buildDirectives
+                |> List.filter (\( _, mp ) -> mp /= Nothing)
+                |> List.length
+
+        _ ->
+            0
+
+
 mustDisband : Gameboard -> Bool
 mustDisband gb =
-    countSupplyCenters gb < countPieces gb
+    countSupplyCenters gb < countPieces gb - countDisbands gb
 
 
-mustBuild : Gameboard -> Bool
-mustBuild gb =
-    countSupplyCenters gb > countPieces gb
+canBuild : Gameboard -> Bool
+canBuild gb =
+    countSupplyCenters gb > countPieces gb + countBuilds gb
 
 
 getTurnAsString : Gameboard -> String

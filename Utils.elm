@@ -45,3 +45,16 @@ graphOf xs f =
 multigraphOf : List a -> (a -> List b) -> List ( a, b )
 multigraphOf xs f =
     List.concat <| List.map (\x -> List.map (\y -> ( x, y )) (f x)) xs
+
+
+fromMaybes : List (Maybe a) -> List a
+fromMaybes mxs =
+    case mxs of
+        [] ->
+            []
+
+        Nothing :: mxs_ ->
+            fromMaybes mxs_
+
+        (Just x) :: mxs_ ->
+            x :: fromMaybes mxs_

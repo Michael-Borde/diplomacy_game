@@ -142,7 +142,7 @@ viewActors gb =
                 getPiecesOfCurrentEmpire gb
                     |> List.map
                         (\p -> button [ onClick (SelectPiece p) ] [ text (toString p) ])
-            else if mustBuild gb then
+            else if canBuild gb then
                 getSupplyCenterIDsOfCurrentEmpire gb
                     |> List.map
                         (\scid -> button [ onClick (SelectSupplyCenter scid) ] [ text (toString scid) ])

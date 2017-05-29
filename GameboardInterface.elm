@@ -272,8 +272,11 @@ getMoveCommands gb p =
         supportableProvinces =
             getMovesToProvinces gb.gameMap p
 
+        isRelevant pid p_ =
+            p_ /= p && (canMoveToProvince gb.gameMap p_ pid || getProvinceIDOfPiece gb.gameMap p_ == pid)
+
         relevantPieces pid =
-            appendMaybe (getOccupant gb pid) <| List.filter (\p -> canMoveToProvince gb.gameMap p pid) gb.pieces
+            appendMaybe (getOccupant gb pid) <| List.filter (isRelevant pid) gb.pieces
 
         supports =
             multigraphOf supportableProvinces relevantPieces

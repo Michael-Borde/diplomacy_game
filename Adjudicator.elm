@@ -6,6 +6,17 @@ import Map exposing (..)
 import Utils exposing (..)
 
 
+type alias AdjudicationInfo =
+    { gameboard : Gameboard
+    , powerLevels : List PowerLevel
+    , dislodgedPieces : List Piece
+    }
+
+
+type alias PowerLevel =
+    ( Int, List MoveDirective )
+
+
 updateSupplyCenters : Gameboard -> Gameboard
 updateSupplyCenters gb =
     let
@@ -25,7 +36,180 @@ updateSupplyCenters gb =
 
 adjudicateMoves : Gameboard -> MoveInfo -> ( Gameboard, List Piece )
 adjudicateMoves gb minfo =
-    ( gb, [] )
+    let
+        _ =
+            Debug.log "Adjudicating moves!" Nothing
+
+        withSupportCut =
+            cutSupports gb minfo.moveDirectives
+
+        _ =
+            Debug.log "With support cut: " withSupportCut
+
+        withConvoysBlocked =
+            blockConvoys gb withSupportCut
+
+        _ =
+            Debug.log "withConvoysBlocked: " withConvoysBlocked
+
+        powerLevels =
+            calculatePowerLevels gb withConvoysBlocked
+
+        _ =
+            Debug.log "Initial power levels: " powerLevels
+
+        final =
+            stepUntil adjudicationStep { gameboard = gb, powerLevels = powerLevels, dislodgedPieces = [] }
+
+        _ =
+            Debug.log "Final power levels: " final.powerLevels
+    in
+        ( final.gameboard, final.dislodgedPieces )
+
+
+adjudicationStep : AdjudicationInfo -> Maybe AdjudicationInfo
+adjudicationStep adjInfo =
+    let
+        -- withinPowerLevelStep powerLevel adjInfo =
+        _ =
+            Debug.log "adjudication step!" Nothing
+
+        stayingPut ( p, mc ) =
+            isHold mc || isConvoy mc
+
+        collide md1 md2 =
+            let
+                ( o1, d1 ) =
+                    toOriginDestination md1
+
+                ( o2, d2 ) =
+                    toOriginDestination md2
+            in
+                d1 == d2 || (o1 == d2) && (o2 == d1)
+
+        failAndHold md powerLevels =
+            case powerLevels of
+                [] ->
+                    [ ( 1, [ md ] ) ]
+
+                ( 1, mds ) :: _ ->
+                    [ ( 1, md :: mds ) ]
+
+                pl :: pls ->
+                    pl :: failAndHold md pls
+
+        wrappedFailAndHold md adjInfo =
+            { adjInfo | powerLevels = failAndHold md adjInfo.powerLevels }
+
+        forEachDirective : (MoveDirective -> AdjudicationInfo -> AdjudicationInfo) -> AdjudicationInfo -> AdjudicationInfo
+        forEachDirective f adjInfo =
+            let
+                foo powerLevels adjInfo =
+                    case powerLevels of
+                        [] ->
+                            adjInfo
+
+                        ( n, mds ) :: pls ->
+                            case mds of
+                                [] ->
+                                    foo pls adjInfo
+
+                                md :: mds ->
+                                    foo (( n, mds ) :: pls) <| f md adjInfo
+            in
+                foo adjInfo.powerLevels adjInfo
+
+        toOriginDestination ( p, mc ) =
+            ( getProvinceIDOfPiece adjInfo.gameboard.gameMap p, getDestination adjInfo.gameboard ( p, mc ) )
+
+        registerHolds mds adjInfo =
+            let
+                foo md1 =
+                    if stayingPut md1 then
+                        forEachDirective
+                            (\md2 ->
+                                if collide md1 md2 then
+                                    wrappedFailAndHold md2
+                                else
+                                    identity
+                            )
+                    else
+                        identity
+            in
+                case mds of
+                    [] ->
+                        adjInfo
+
+                    md1 :: mds ->
+                        foo md1 <|
+                            registerHolds mds adjInfo
+
+        registerStandoffs mds adjInfo =
+            let
+                foo md1 =
+                    if stayingPut md1 then
+                        forEachDirective
+                            (\md2 ->
+                                if collide md1 md2 then
+                                    wrappedFailAndHold md2
+                                else
+                                    identity
+                            )
+                    else
+                        identity
+            in
+                case mds of
+                    [] ->
+                        adjInfo
+
+                    md1 :: mds ->
+                        foo md1 <|
+                            registerHolds mds adjInfo
+
+        registerAdvances mds adjInfo =
+            let
+                foo md1 =
+                    if stayingPut md1 then
+                        forEachDirective
+                            (\md2 ->
+                                if collide md1 md2 then
+                                    wrappedFailAndHold md2
+                                else
+                                    identity
+                            )
+                    else
+                        identity
+            in
+                case mds of
+                    [] ->
+                        adjInfo
+
+                    md1 :: mds ->
+                        foo md1 <|
+                            registerHolds mds adjInfo
+
+        adjudicatePowerLevel ( n, mds ) adjInfo =
+            let
+                withHolds =
+                    registerHolds mds adjInfo
+
+                withStandoffs =
+                    registerStandoffs mds withHolds
+
+                withAdvances =
+                    registerAdvances mds withStandoffs
+            in
+                withAdvances
+    in
+        case adjInfo.powerLevels of
+            [] ->
+                Nothing
+
+            powerLevel :: powerLevels_ ->
+                adjInfo
+                    |> adjudicatePowerLevel powerLevel
+                    |> (\x -> { x | powerLevels = powerLevels_ })
+                    |> Just
 
 
 cutSupports : Gameboard -> MoveDirectives -> MoveDirectives
@@ -42,8 +226,8 @@ cutSupports gb mds =
         List.foldr cutIfSupporting mds (attackedPieces gb mds)
 
 
-cutConvoys : Gameboard -> MoveDirectives -> MoveDirectives
-cutConvoys gb mds =
+blockConvoys : Gameboard -> MoveDirectives -> MoveDirectives
+blockConvoys gb mds =
     let
         cutIfConvoyingToOccupied p mds =
             case getCommand mds p of
@@ -59,8 +243,8 @@ cutConvoys gb mds =
         List.foldr cutIfConvoyingToOccupied mds gb.pieces
 
 
-calculatePowers : Gameboard -> MoveDirectives -> List ( Piece, MoveCommand, Int )
-calculatePowers gb mds =
+calculatePowerLevels : Gameboard -> MoveDirectives -> List PowerLevel
+calculatePowerLevels gb mds =
     let
         supportCommands =
             gb.pieces
@@ -105,6 +289,8 @@ calculatePowers gb mds =
             ( p, getCommand mds p, 1 + countSupport p )
     in
         List.map getPower gb.pieces
+            |> partitionBy (\( _, _, n ) -> n) (\( p, mc, _ ) -> ( p, mc ))
+            |> List.sortBy Tuple.first
 
 
 attackedPieces : Gameboard -> MoveDirectives -> List Piece

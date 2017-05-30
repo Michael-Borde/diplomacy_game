@@ -58,3 +58,30 @@ fromMaybes mxs =
 
         (Just x) :: mxs_ ->
             x :: fromMaybes mxs_
+
+
+partitionBy : (a -> b) -> (a -> c) -> List a -> List ( b, List c )
+partitionBy f g xs =
+    let
+        insert x p =
+            case p of
+                [] ->
+                    [ ( f x, [ g x ] ) ]
+
+                ( y, zs ) :: p ->
+                    if f x == y then
+                        ( y, g x :: zs ) :: p
+                    else
+                        ( y, zs ) :: insert x p
+    in
+        List.foldr insert [] xs
+
+
+stepUntil : (a -> Maybe a) -> a -> a
+stepUntil f x =
+    case f x of
+        Nothing ->
+            x
+
+        Just x_ ->
+            stepUntil f x_

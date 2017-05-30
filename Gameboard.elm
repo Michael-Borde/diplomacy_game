@@ -169,3 +169,19 @@ isConvoy mc =
 getCommand : MoveDirectives -> Piece -> MoveCommand
 getCommand mds p =
     Maybe.withDefault Hold <| get p mds
+
+
+getDestination : Gameboard -> MoveDirective -> ProvinceID
+getDestination gb ( p, mc ) =
+    case mc of
+        Hold ->
+            getProvinceIDOfPiece gb.gameMap p
+
+        Advance lid ->
+            getProvinceID gb.gameMap lid
+
+        Support ( _, pid ) ->
+            getProvinceIDOfPiece gb.gameMap p
+
+        Convoy _ ->
+            getProvinceIDOfPiece gb.gameMap p

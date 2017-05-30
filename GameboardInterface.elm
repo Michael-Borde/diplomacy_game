@@ -112,7 +112,7 @@ nextTurn : Gameboard -> Gameboard
 nextTurn gb =
     let
         _ =
-            Debug.log "Gameboard.nextTurn"
+            Debug.log "Gameboard.nextTurn" Nothing
     in
         case gb.turn of
             [] ->

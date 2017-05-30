@@ -2,6 +2,7 @@ module GameMapGraphics exposing (..)
 
 import GameMap as GM
 import GameMapData as GMD
+import Europe as TheMap
 
 type alias GameMapGraphics =
     { empireColors : List EmpireColor
@@ -24,13 +25,17 @@ type alias ProvinceInfo =
     , polygon : String
     , empire : Maybe GM.Empire
     , pieceLocation : (Int, Int)
+    , terrainType : GMD.TerrainType
     }
 
 ---------------------------------------
 
 convert : GMD.GameMapData -> GameMapGraphics
 convert gmd =
-    Debug.crash "poop"
+    { empireColors = convertEmpireColors gmd.empireColors
+    , supplyCenters = convertSupplyCenters gmd.supplyCenters
+    , provinces = convertProvinces (List.reverse gmd.mapData)  -- Reverse to get seas first
+    }
 
 convertEmpireColors : List GMD.EmpireColor -> List EmpireColor
 convertEmpireColors xs =
@@ -64,6 +69,7 @@ createProvinceInfo eid pid ginfo =
     , polygon = ginfo.polygon
     , empire = Maybe.map GM.Empire eid
     , pieceLocation = ginfo.coordinates
+    , terrainType = ginfo.terrainType
     }
 
 provinceDataToPID : GMD.ProvinceData -> GM.ProvinceID
@@ -71,3 +77,8 @@ provinceDataToPID province =
     case province of
         GMD.Capital (pid, _, _)     -> GM.Capital (GM.SupplyCenter pid)
         GMD.Noncapital (pid, _, _)  -> GM.Noncapital pid
+
+-----------------------------
+
+freshGraphics : GameMapGraphics
+freshGraphics = convert TheMap.gameMapData

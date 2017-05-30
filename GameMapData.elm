@@ -12,7 +12,8 @@ module GameMapData exposing (
     ProvinceData,
     EmpireColor,
     GraphicsInfo,
-    SupplyCenterData)
+    SupplyCenterData,
+    TerrainType(..))
 
 type alias ProvinceID = String
 type alias EmpireID = String
@@ -50,8 +51,13 @@ type alias EmpireColor =
 
 type alias GraphicsInfo =
     { polygon : String
+    , terrainType : TerrainType
     , coordinates : (Int, Int)
     }
+
+type TerrainType
+    = L
+    | W
 
 type alias SupplyCenterData =
     { supplyCenterID : String

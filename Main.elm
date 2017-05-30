@@ -3,8 +3,15 @@ module Main exposing (main)
 import Gameboard exposing (..)
 import GameboardInterface exposing (..)
 import GameMap exposing (..)
+import GameMapGraphics as GMG
+import GameMapData as GMD
+
 import Html exposing (..)
+import Html.Attributes as HA
 import Html.Events exposing (onClick)
+
+import Svg
+import Svg.Attributes exposing (..)
 
 
 main : Program Never Model Msg
@@ -32,6 +39,7 @@ type alias Model =
     { gameboard : Gameboard
     , selectedPiece : Maybe Piece
     , selectedSupplyCenter : Maybe SupplyCenterID
+    , graphics : GMG.GameMapGraphics
     }
 
 
@@ -39,12 +47,17 @@ init : ( Model, Cmd Msg )
 init =
     ( initialModel, Cmd.none )
 
+-------
+
+-------
+
 
 initialModel : Model
 initialModel =
     { gameboard = freshGameboard
     , selectedPiece = Nothing
     , selectedSupplyCenter = Nothing
+    , graphics = GMG.freshGraphics
     }
 
 
@@ -89,18 +102,100 @@ deselect : Model -> Model
 deselect m =
     { m | selectedPiece = Nothing, selectedSupplyCenter = Nothing }
 
+--------------------------------------
+
+test : Html.Html msg
+test =
+     Svg.svg
+      [ width "120", height "120", viewBox "0 0 120 120" ]
+      [ Svg.rect [ x "10", y "10", width "100", height "100", rx "15", ry "15" ] [] ]
+
+
+buildMap : Model -> Html.Html msg
+buildMap model =
+    let
+        provincePolygons = List.map buildProvincePolygon model.graphics.provinces
+        scPolygons = List.map (buildSCPolygon model) model.graphics.supplyCenters
+        css = HA.style [ ("margin", "auto"), ("display", "block")]
+        svgStyle = [ height "100vh", viewBox "0 0 610 560", css ]
+        polygons = provincePolygons ++ scPolygons
+    in
+    Svg.svg svgStyle polygons
+
+buildProvincePolygon : GMG.ProvinceInfo -> Svg.Svg msg
+buildProvincePolygon prov =
+    let
+        color = provinceColor prov
+    in
+    Svg.polygon
+        [ points prov.polygon
+        , fill color
+        , stroke "black"
+        , strokeLinejoin "round"
+        ] []
+
+provinceColor : GMG.ProvinceInfo -> String
+provinceColor prov =
+    case prov.empire of
+        Just emp -> empireToColor emp
+        Nothing ->
+            case prov.terrainType of
+                GMD.L -> "#FFFFDD"
+                GMD.W -> "#99CCFF"
+
+-- Hard code for now
+empireToColor : Empire -> String
+empireToColor empire =
+    case empire of
+        Empire "England" -> "#8E8AC0"
+        Empire "France" -> "#98C9D6"
+        Empire "Germany" -> "#ADA08F"
+        Empire "Russia" -> "#E19289"
+        Empire "Italy" -> "#92CA74"
+        Empire "Austria-Hungary" -> "#D9A679"
+        Empire "Turkey" -> "#D7C94B"
+        _ -> Debug.crash "Not an empire"
+
+occupantToColor : Maybe Piece -> String
+occupantToColor piece =
+    case piece of
+        Just (Army pinfo) -> empireToColor pinfo.empire
+        Just (Fleet pinfo) -> empireToColor pinfo.empire
+        Nothing -> "grey"
+
+buildSCPolygon : Model -> GMG.SupplyCenter -> Svg.Svg msg
+buildSCPolygon model sc =
+    let
+        occupant = getOccupant model.gameboard (Capital (SupplyCenter sc.supplyCenterID))
+        color = occupantToColor occupant
+        x = toString (Tuple.first sc.supplyCenterCoordinates)
+        y = toString (Tuple.second sc.supplyCenterCoordinates)
+    in
+    Svg.circle
+        [ r "4"
+        , cx x
+        , cy y
+        , fill color
+        , stroke "black"
+        ] []
+
+-----------------------------------------
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ div [] <|
-            h1 [] [ text "View Map" ]
-                :: viewGameboard model.gameboard
-        , div [] <|
-            h1 [] [ text "Issue Directives" ]
-                :: viewCommandPanel model
-        , div []
-            [ endTurnButton ]
+    div [class "row"]
+        [ div [class "col-md-8"]
+            [ buildMap model ]
+        , div [class "col-md-4"]
+            [ div [] <|
+                h1 [] [ text "View Map" ]
+                    :: viewGameboard model.gameboard
+            , div [] <|
+                h1 [] [ text "Issue Directives" ]
+                    :: viewCommandPanel model
+            , div []
+                [ endTurnButton ]
+            ]
         ]
 
 

@@ -273,17 +273,14 @@ calculatePowerLevels gb mds =
                 _ ->
                     Debug.crash "supports called with non-support command!"
 
+        incrementIfSupports p cmd n =
+            if supports cmd p then
+                n + 1
+            else
+                n
+
         countSupport p =
-            List.foldr
-                (\cmd ->
-                    \n ->
-                        if supports cmd p then
-                            n + 1
-                        else
-                            n
-                )
-                0
-                supportCommands
+            List.foldr (incrementIfSupports p) 0 supportCommands
 
         getPower p =
             ( p, getCommand mds p, 1 + countSupport p )
@@ -291,6 +288,7 @@ calculatePowerLevels gb mds =
         List.map getPower gb.pieces
             |> partitionBy (\( _, _, n ) -> n) (\( p, mc, _ ) -> ( p, mc ))
             |> List.sortBy Tuple.first
+            |> List.reverse
 
 
 attackedPieces : Gameboard -> MoveDirectives -> List Piece

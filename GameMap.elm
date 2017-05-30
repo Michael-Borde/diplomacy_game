@@ -78,6 +78,7 @@ getLocation : GameMap -> LocationID -> Location
 getLocation gm lid =
     case List.head (List.filter (\loc -> loc.lid == lid) gm) of
         Nothing ->
+            let _ = Debug.log "LID: " lid in
             Debug.crash "LocationID not found"
 
         Just loc ->
@@ -153,10 +154,10 @@ processEmpire ( maybeEmpireID, provinces ) =
 processProvinceData : GMD.ProvinceData -> List Location
 processProvinceData pdata =
     case pdata of
-        GMD.Capital ( pid, locs ) ->
+        GMD.Capital ( pid, locs, _ ) ->
             List.map (newLocation (Capital <| SupplyCenter pid)) locs
 
-        GMD.Noncapital ( pid, locs ) ->
+        GMD.Noncapital ( pid, locs, _ ) ->
             List.map (newLocation (Noncapital pid)) locs
 
 

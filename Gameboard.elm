@@ -185,3 +185,32 @@ getDestination gb ( p, mc ) =
 
         Convoy _ ->
             getProvinceIDOfPiece gb.gameMap p
+
+
+movePiece : Piece -> LocationID -> Gameboard -> Gameboard
+movePiece p lid gb =
+    let
+        changePieceLocation p =
+            case p of
+                Army pinfo ->
+                    Army { pinfo | location = lid }
+
+                Fleet pinfo ->
+                    Fleet { pinfo | location = lid }
+
+        pieces =
+            gb.pieces
+                |> List.filter ((/=) p)
+                |> (::) (changePieceLocation p)
+    in
+        { gb | pieces = pieces }
+
+
+advancesTo : MoveDirective -> LocationID
+advancesTo md =
+    case Tuple.second md of
+        Advance lid ->
+            lid
+
+        _ ->
+            Debug.crash "tried to get destination of non-advance"

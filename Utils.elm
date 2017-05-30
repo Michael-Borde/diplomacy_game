@@ -85,3 +85,28 @@ stepUntil f x =
 
         Just x_ ->
             stepUntil f x_
+
+
+failIfNothing : Maybe a -> a
+failIfNothing mx =
+    case mx of
+        Nothing ->
+            Debug.crash "fail if nothing"
+
+        Just x ->
+            x
+
+
+applyUntilIdempotent : (a -> a) -> a -> a
+applyUntilIdempotent f x =
+    let
+        fx =
+            f x
+
+        -- _ =
+        --     Debug.log "applyUntilIdemPotent - " ( fx, x )
+    in
+        if fx == x then
+            x
+        else
+            applyUntilIdempotent f fx

@@ -55,37 +55,56 @@ adjudicateMoves gb minfo =
         powerLevels =
             calculatePowerLevels gb withConvoysBlocked
 
-        _ =
-            Debug.log "Initial power levels: " powerLevels
-
+        -- _ =
+        -- Debug.log "Initial power levels: " powerLevels
         final =
-            stepUntil adjudicationStep { gameboard = gb, powerLevels = powerLevels, dislodgedPieces = [] }
+            applyUntilIdempotent adjudicationStep { gameboard = gb, powerLevels = powerLevels, dislodgedPieces = [] }
 
-        _ =
-            Debug.log "Final power levels: " final.powerLevels
+        -- _ =
+        --     Debug.log "Final power levels: " final.powerLevels
     in
         ( final.gameboard, final.dislodgedPieces )
 
 
-adjudicationStep : AdjudicationInfo -> Maybe AdjudicationInfo
+collide : Gameboard -> MoveDirective -> MoveDirective -> Bool
+collide gb md1 md2 =
+    let
+        ( o1, d1 ) =
+            toOriginDestination gb md1
+
+        ( o2, d2 ) =
+            toOriginDestination gb md2
+    in
+        d1 == d2 || (o1 == d2) && (o2 == d1)
+
+
+toOriginDestination : Gameboard -> MoveDirective -> ( ProvinceID, ProvinceID )
+toOriginDestination gb ( p, mc ) =
+    ( getProvinceIDOfPiece gb.gameMap p, getDestination gb ( p, mc ) )
+
+
+getTopPowerLevel : AdjudicationInfo -> PowerLevel
+getTopPowerLevel adjInfo =
+    Maybe.withDefault ( 1, [] ) <| List.head adjInfo.powerLevels
+
+
+changeGameboard : (Gameboard -> Gameboard) -> AdjudicationInfo -> AdjudicationInfo
+changeGameboard f adjInfo =
+    { adjInfo | gameboard = f adjInfo.gameboard }
+
+
+adjudicationStep : AdjudicationInfo -> AdjudicationInfo
 adjudicationStep adjInfo =
     let
         -- withinPowerLevelStep powerLevel adjInfo =
         _ =
-            Debug.log "adjudication step!" Nothing
+            Debug.log "adjudication step!" adjInfo.powerLevels
 
         stayingPut ( p, mc ) =
             isHold mc || isConvoy mc
 
-        collide md1 md2 =
-            let
-                ( o1, d1 ) =
-                    toOriginDestination md1
-
-                ( o2, d2 ) =
-                    toOriginDestination md2
-            in
-                d1 == d2 || (o1 == d2) && (o2 == d1)
+        collide_ =
+            collide adjInfo.gameboard
 
         fail md powerLevels =
             case powerLevels of
@@ -106,15 +125,50 @@ adjudicationStep adjInfo =
                 pl :: pls ->
                     pl :: hold ( p, Hold ) pls
 
+        dropDirective : MoveDirective -> AdjudicationInfo -> AdjudicationInfo
+        dropDirective md adjInfo =
+            let
+                dropDirective__ : MoveDirective -> PowerLevel -> PowerLevel
+                dropDirective__ md ( n, mds ) =
+                    case mds of
+                        [] ->
+                            ( n, [] )
+
+                        md_ :: mds_ ->
+                            if md == md_ then
+                                dropDirective__ md ( n, mds_ )
+                            else
+                                dropDirective__ md ( n, mds_ )
+                                    |> \( n, mds ) -> ( n, md_ :: mds )
+
+                dropDirective_ md pls =
+                    case pls of
+                        [] ->
+                            []
+
+                        pl :: pls_ ->
+                            dropDirective__ md pl :: dropDirective_ md pls_
+            in
+                { adjInfo | powerLevels = dropDirective_ md adjInfo.powerLevels }
+
         failAndHold md =
             fail md >> hold md
 
         wrappedFailAndHold md adjInfo =
+            -- let
+            --     _ =
+            --         Debug.log "wrappedFailAndHold" md
+            -- in
+            { adjInfo | powerLevels = failAndHold md adjInfo.powerLevels }
+
+        wrappedFail md adjInfo =
             { adjInfo | powerLevels = failAndHold md adjInfo.powerLevels }
 
         forEachDirective : (MoveDirective -> AdjudicationInfo -> AdjudicationInfo) -> AdjudicationInfo -> AdjudicationInfo
         forEachDirective f adjInfo =
             let
+                -- _ =
+                --     Debug.log "forEachDirective" f
                 foo powerLevels adjInfo =
                     case powerLevels of
                         [] ->
@@ -125,25 +179,29 @@ adjudicationStep adjInfo =
                                 [] ->
                                     foo pls adjInfo
 
-                                md :: mds ->
-                                    foo (( n, mds ) :: pls) <| f md adjInfo
+                                md :: mds_ ->
+                                    foo (( n, mds_ ) :: pls) <| f md adjInfo
             in
                 foo adjInfo.powerLevels adjInfo
 
-        toOriginDestination ( p, mc ) =
-            ( getProvinceIDOfPiece adjInfo.gameboard.gameMap p, getDestination adjInfo.gameboard ( p, mc ) )
-
-        registerHolds mds adjInfo =
+        registerHolds : AdjudicationInfo -> AdjudicationInfo
+        registerHolds adjInfo =
             let
+                ( power, mds ) =
+                    getTopPowerLevel adjInfo
+
+                -- _ =
+                --     Debug.log "registerHolds" mds
                 foo md1 =
                     if stayingPut md1 then
-                        forEachDirective
-                            (\md2 ->
-                                if collide md1 md2 then
-                                    wrappedFailAndHold md2
-                                else
-                                    identity
-                            )
+                        registerMove md1
+                            << forEachDirective
+                                (\md2 ->
+                                    if md1 /= md2 && collide_ md1 md2 then
+                                        wrappedFailAndHold md2
+                                    else
+                                        identity
+                                )
                     else
                         identity
             in
@@ -152,75 +210,122 @@ adjudicationStep adjInfo =
                         adjInfo
 
                     md1 :: mds ->
-                        foo md1 <|
-                            registerHolds mds adjInfo
+                        registerHolds <|
+                            foo md1 adjInfo
 
-        registerStandoffs mds adjInfo =
+        registerStandoffs adjInfo =
             let
-                foo md1 =
-                    if stayingPut md1 then
-                        forEachDirective
-                            (\md2 ->
-                                if collide md1 md2 then
-                                    wrappedFailAndHold md2
-                                else
-                                    identity
-                            )
-                    else
-                        identity
+                ( n, mds ) =
+                    getTopPowerLevel adjInfo
+
+                zipped =
+                    List.map (\x -> ( x, False )) mds
+
+                findStandoffs md mdbs =
+                    ( List.any (collide_ md) <| List.map (Tuple.first) mdbs
+                    , List.map (\( md_, b ) -> ( md_, b || collide_ md md_ )) mdbs
+                    )
+
+                withStandoffs mdbs =
+                    case mdbs of
+                        [] ->
+                            []
+
+                        ( md, b ) :: mdbs ->
+                            let
+                                ( b_, mdbs_ ) =
+                                    findStandoffs md mdbs
+                            in
+                                ( md, b || b_ ) :: withStandoffs mdbs_
+
+                powerLevels =
+                    List.foldr
+                        (\( md, b ) ->
+                            if b then
+                                failAndHold md
+                            else
+                                identity
+                        )
+                        adjInfo.powerLevels
+                        (withStandoffs zipped)
             in
-                case mds of
-                    [] ->
+                { adjInfo | powerLevels = powerLevels }
+
+        registerAdvances adjInfo =
+            let
+                ( n, mds ) =
+                    getTopPowerLevel adjInfo
+
+                -- dislodges the piece at md2 if md2 is a counter-move
+                -- applies fail if md2 fails because of standoff
+                dislodge md1 md2 adjInfo =
+                    case md1 of
+                        ( p, Advance lid ) ->
+                            let
+                                ( o1, d1 ) =
+                                    toOriginDestination adjInfo.gameboard md1
+
+                                ( o2, d2 ) =
+                                    toOriginDestination adjInfo.gameboard md2
+                            in
+                                if d1 == d2 then
+                                    wrappedFailAndHold md2 adjInfo
+                                else if (o1 == d2) && (o2 == d1) then
+                                    dislodgePiece (Tuple.first md2) <| wrappedFailAndHold md2 adjInfo
+                                else
+                                    adjInfo
+
+                        _ ->
+                            adjInfo
+
+                dislodgePiece p adjInfo =
+                    { adjInfo | dislodgedPieces = p :: adjInfo.dislodgedPieces }
+
+                registerAdvance md adjInfo =
+                    if isAdvance (Tuple.second md) then
+                        adjInfo
+                            |> registerMove md
+                            |> forEachDirective (dislodge md)
+                    else
                         adjInfo
 
-                    md1 :: mds ->
-                        foo md1 <|
-                            registerHolds mds adjInfo
+                result =
+                    List.foldr registerAdvance adjInfo mds
 
-        registerAdvances mds adjInfo =
-            let
-                foo md1 =
-                    if stayingPut md1 then
-                        forEachDirective
-                            (\md2 ->
-                                if collide md1 md2 then
-                                    wrappedFailAndHold md2
-                                else
-                                    identity
-                            )
-                    else
-                        identity
+                _ =
+                    Debug.log "result of registerAdvances: " result.powerLevels
             in
-                case mds of
-                    [] ->
-                        adjInfo
+                List.foldr registerAdvance adjInfo mds
 
-                    md1 :: mds ->
-                        foo md1 <|
-                            registerHolds mds adjInfo
+        lopOffHeadIfEmpty : AdjudicationInfo -> AdjudicationInfo
+        lopOffHeadIfEmpty adjInfo =
+            case adjInfo.powerLevels of
+                ( _, [] ) :: pls ->
+                    { adjInfo | powerLevels = pls }
 
-        adjudicatePowerLevel ( n, mds ) adjInfo =
-            let
-                withHolds =
-                    registerHolds mds adjInfo
+                _ ->
+                    adjInfo
 
-                withStandoffs =
-                    registerStandoffs mds withHolds
+        registerMove : MoveDirective -> AdjudicationInfo -> AdjudicationInfo
+        registerMove ( p, mc ) adjInfo =
+            case mc of
+                Advance lid ->
+                    adjInfo
+                        |> changeGameboard (movePiece p lid)
+                        |> dropDirective ( p, mc )
 
-                withAdvances =
-                    registerAdvances mds withStandoffs
-            in
-                withAdvances
+                _ ->
+                    dropDirective ( p, mc ) adjInfo
     in
         case adjInfo.powerLevels of
             [] ->
-                Nothing
+                adjInfo
 
             powerLevel :: powerLevels_ ->
                 adjInfo
-                    |> adjudicatePowerLevel powerLevel
-                    |> (\x -> { x | powerLevels = powerLevels_ })
-                    |> Just
+                    |> applyUntilIdempotent (registerHolds >> registerStandoffs)
+                    |> registerAdvances
+                    |> lopOffHeadIfEmpty
 
 
 cutSupports : Gameboard -> MoveDirectives -> MoveDirectives

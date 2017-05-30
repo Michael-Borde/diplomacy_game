@@ -4,6 +4,8 @@ import GameMap as GM
 import GameMapData as GMD
 import Europe as TheMap
 
+import Utils exposing (firstTo)
+
 type alias GameMapGraphics =
     { empireColors : List EmpireColor
     , supplyCenters : List SupplyCenter
@@ -82,3 +84,7 @@ provinceDataToPID province =
 
 freshGraphics : GameMapGraphics
 freshGraphics = convert TheMap.gameMapData
+
+getProvinceInfo : GM.ProvinceID -> List ProvinceInfo -> Maybe ProvinceInfo
+getProvinceInfo pid pinfos =
+    firstTo (\pinfo -> pid == pinfo.provinceID) pinfos

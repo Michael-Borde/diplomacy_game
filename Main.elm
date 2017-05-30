@@ -10,6 +10,8 @@ import Html exposing (..)
 import Html.Attributes as HA
 import Html.Events exposing (onClick)
 
+import Map exposing (..)
+
 import Svg
 import Svg.Attributes exposing (..)
 
@@ -104,23 +106,31 @@ deselect m =
 
 --------------------------------------
 
-test : Html.Html msg
-test =
-     Svg.svg
-      [ width "120", height "120", viewBox "0 0 120 120" ]
-      [ Svg.rect [ x "10", y "10", width "100", height "100", rx "15", ry "15" ] [] ]
-
-
 buildMap : Model -> Html.Html msg
 buildMap model =
     let
         provincePolygons = List.map buildProvincePolygon model.graphics.provinces
-        scPolygons = List.map (buildSCPolygon model) model.graphics.supplyCenters
+        scPolygons = List.map (buildSCPolygon model.gameboard.supplyCenters) model.graphics.supplyCenters
+        piecePolygons = List.map (buildPiecePolygon model.graphics.provinces model.gameboard.gameMap) model.gameboard.pieces
         css = HA.style [ ("margin", "auto"), ("display", "block")]
         svgStyle = [ height "100vh", viewBox "0 0 610 560", css ]
-        polygons = provincePolygons ++ scPolygons
+        polygons = provincePolygons ++ scPolygons ++ piecePolygons
     in
     Svg.svg svgStyle polygons
+
+-- Hard code for now
+empireToColor : Empire -> String
+empireToColor empire =
+    case empire of
+        Empire "England" -> "#8E8AC0"
+        Empire "France" -> "#98C9D6"
+        Empire "Germany" -> "#ADA08F"
+        Empire "Russia" -> "#E19289"
+        Empire "Italy" -> "#92CA74"
+        Empire "Austria-Hungary" -> "#D9A679"
+        Empire "Turkey" -> "#D7C94B"
+        _ -> Debug.crash "Not an empire"
+
 
 buildProvincePolygon : GMG.ProvinceInfo -> Svg.Svg msg
 buildProvincePolygon prov =
@@ -143,31 +153,11 @@ provinceColor prov =
                 GMD.L -> "#FFFFDD"
                 GMD.W -> "#99CCFF"
 
--- Hard code for now
-empireToColor : Empire -> String
-empireToColor empire =
-    case empire of
-        Empire "England" -> "#8E8AC0"
-        Empire "France" -> "#98C9D6"
-        Empire "Germany" -> "#ADA08F"
-        Empire "Russia" -> "#E19289"
-        Empire "Italy" -> "#92CA74"
-        Empire "Austria-Hungary" -> "#D9A679"
-        Empire "Turkey" -> "#D7C94B"
-        _ -> Debug.crash "Not an empire"
 
-occupantToColor : Maybe Piece -> String
-occupantToColor piece =
-    case piece of
-        Just (Army pinfo) -> empireToColor pinfo.empire
-        Just (Fleet pinfo) -> empireToColor pinfo.empire
-        Nothing -> "grey"
-
-buildSCPolygon : Model -> GMG.SupplyCenter -> Svg.Svg msg
-buildSCPolygon model sc =
+buildSCPolygon : Map SupplyCenterID (Maybe Empire) -> GMG.SupplyCenter -> Svg.Svg msg
+buildSCPolygon scMap sc =
     let
-        occupant = getOccupant model.gameboard (Capital (SupplyCenter sc.supplyCenterID))
-        color = occupantToColor occupant
+        color = scColor scMap sc
         x = toString (Tuple.first sc.supplyCenterCoordinates)
         y = toString (Tuple.second sc.supplyCenterCoordinates)
     in
@@ -178,6 +168,62 @@ buildSCPolygon model sc =
         , fill color
         , stroke "black"
         ] []
+
+scColor : Map SupplyCenterID (Maybe Empire) -> GMG.SupplyCenter -> String
+scColor scMap sc =
+    case get (SupplyCenter sc.supplyCenterID) scMap of
+        Just (Just empire) -> empireToColor empire
+        Just (Nothing) -> "#666"
+        Nothing -> "#666"
+
+
+buildPiecePolygon : List GMG.ProvinceInfo -> GameMap -> Piece -> Svg.Svg msg
+buildPiecePolygon provinces gamemap piece =
+    let
+        color = pieceColor piece
+        pos = piecePos provinces gamemap piece
+    in
+    case piece of
+        Army pinfo -> buildArmyPolygon color pos
+        Fleet pinfo -> buildFleetPolygon color pos
+
+
+pieceColor : Piece -> String
+pieceColor piece =
+    case piece of
+        Army pinfo -> empireToColor pinfo.empire
+        Fleet pinfo -> empireToColor pinfo.empire
+
+
+piecePos : List GMG.ProvinceInfo -> GameMap -> Piece -> (Int, Int)
+piecePos provinces gamemap piece =
+    let
+        pid = getProvinceIDOfPiece gamemap piece
+        pinfo = case (GMG.getProvinceInfo pid provinces) of
+                    Just pinfo -> pinfo
+                    Nothing -> Debug.crash "error pid does not exist"
+    in
+    pinfo.pieceLocation
+
+buildArmyPolygon : String -> (Int, Int) -> Svg.Svg msg
+buildArmyPolygon color pos =
+    let
+        one = Svg.path [ d "M9,-6 L2,0 M9,6 L0,0" ] []
+        two = Svg.path [ d "M-11,-6 v4 h17 a2,2 0,0 0 0,-4z" ] []
+        three = Svg.circle [ r "6" ] []
+        trans = "translate" ++ (toString pos)
+    in
+    Svg.g [ transform trans, fill color, stroke "black" ] [one, two, three]
+
+
+buildFleetPolygon : String -> (Int, Int) -> Svg.Svg msg
+buildFleetPolygon color pos =
+    let
+        one = Svg.polygon [ points "-2,-3 10,-3 -2,-13" ] []
+        two = Svg.polygon [ points "-12,-1 -6,5 6,5 12,-1" ] []
+        trans = "translate" ++ (toString pos)
+    in
+    Svg.g [ transform trans, fill color, stroke "black" ] [one, two]
 
 -----------------------------------------
 

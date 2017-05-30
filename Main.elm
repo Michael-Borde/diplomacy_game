@@ -236,7 +236,7 @@ view model =
             [ div [] <|
                 viewGameboard model.gameboard
             , div [] <|
-                h1 [] [ text "Issue Directives" ]
+                h1 [class "list-group"] [ text "Issue Directives" ]
                     :: viewCommandPanel model
             , div []
                 [ endTurnButton ]
@@ -281,23 +281,23 @@ viewActors gb =
             if mustDisband gb then
                 getPiecesOfCurrentEmpire gb
                     |> List.map
-                        (\p -> button [ onClick (SelectPiece p) ] [ text (pieceToString p) ])
+                        (\p -> button [ onClick (SelectPiece p), class "list-group-item list-group-item-action"  ] [ text (pieceToString p) ])
             else if canBuild gb then
                 getSupplyCenterIDsOfCurrentEmpire gb
                     |> List.map
-                        (\scid -> button [ onClick (SelectSupplyCenter scid) ] [ text (scToString scid) ])
+                        (\scid -> button [ onClick (SelectSupplyCenter scid), class "list-group-item list-group-item-action"  ] [ text (scToString scid) ])
             else
                 [ text "You have nothing to build or disband!" ]
 
         Move _ ->
             getPiecesOfCurrentEmpire gb
                 |> List.map
-                    (\p -> button [ onClick (SelectPiece p) ] [ text (pieceToString p) ])
+                    (\p -> button [ onClick (SelectPiece p), class "list-group-item list-group-item-action" ] [ text (pieceToString p) ])
 
         Retreat _ ->
             getRetreatingPieces gb
                 |> List.map
-                    (\p -> button [ onClick (SelectPiece p) ] [ text (pieceToString p) ])
+                    (\p -> button [ onClick (SelectPiece p), class "list-group-item list-group-item-action"  ] [ text (pieceToString p) ])
 
 viewCommandPanel : Model -> List (Html Msg)
 viewCommandPanel m =
@@ -314,7 +314,7 @@ viewCommandPanel m =
                     Just p ->
                         getMoveCommands gb p
                             |> List.map
-                                (\mc -> button [ onClick (SelectMove ( p, mc )) ] [ text (commandToString mc) ])
+                                (\mc -> button [ onClick (SelectMove ( p, mc )), class "list-group-item list-group-item-action"  ] [ text (commandToString mc) ])
 
             _ ->
                 []
@@ -365,4 +365,4 @@ pidToString pid =
 
 endTurnButton : Html Msg
 endTurnButton =
-    button [ onClick EndTurn ] [ text "End Turn" ]
+    button [ onClick EndTurn, class "list-group-item list-group-item-action"  ] [ text "End Turn" ]

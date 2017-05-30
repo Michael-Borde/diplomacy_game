@@ -103,8 +103,8 @@ applyUntilIdempotent f x =
         fx =
             f x
 
-        -- _ =
-        --     Debug.log "applyUntilIdemPotent - " ( fx, x )
+        _ =
+            Debug.log "applyUntilIdemPotent - " ( fx, x )
     in
         if fx == x then
             x

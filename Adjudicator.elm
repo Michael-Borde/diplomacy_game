@@ -93,6 +93,30 @@ changeGameboard f adjInfo =
     { adjInfo | gameboard = f adjInfo.gameboard }
 
 
+dropDirective : MoveDirective -> AdjudicationInfo -> AdjudicationInfo
+dropDirective md adjInfo =
+    let
+        dropDirective__ : MoveDirective -> PowerLevel -> PowerLevel
+        dropDirective__ md ( n, mds ) =
+            ( n, List.filter ((/=) md) mds )
+
+        dropDirective_ md pls =
+            case pls of
+                [] ->
+                    []
+
+                pl :: pls_ ->
+                    dropDirective__ md pl :: dropDirective_ md pls_
+
+        powerLevels =
+            dropDirective_ md adjInfo.powerLevels
+
+        _ =
+            Debug.log "dropDirective" ( md, powerLevels )
+    in
+        { adjInfo | powerLevels = powerLevels }
+
+
 adjudicationStep : AdjudicationInfo -> AdjudicationInfo
 adjudicationStep adjInfo =
     let
@@ -124,32 +148,6 @@ adjudicationStep adjInfo =
 
                 pl :: pls ->
                     pl :: hold ( p, Hold ) pls
-
-        dropDirective : MoveDirective -> AdjudicationInfo -> AdjudicationInfo
-        dropDirective md adjInfo =
-            let
-                dropDirective__ : MoveDirective -> PowerLevel -> PowerLevel
-                dropDirective__ md ( n, mds ) =
-                    case mds of
-                        [] ->
-                            ( n, [] )
-
-                        md_ :: mds_ ->
-                            if md == md_ then
-                                dropDirective__ md ( n, mds_ )
-                            else
-                                dropDirective__ md ( n, mds_ )
-                                    |> \( n, mds ) -> ( n, md_ :: mds )
-
-                dropDirective_ md pls =
-                    case pls of
-                        [] ->
-                            []
-
-                        pl :: pls_ ->
-                            dropDirective__ md pl :: dropDirective_ md pls_
-            in
-                { adjInfo | powerLevels = dropDirective_ md adjInfo.powerLevels }
 
         failAndHold md =
             fail md >> hold md
@@ -192,26 +190,21 @@ adjudicationStep adjInfo =
 
                 -- _ =
                 --     Debug.log "registerHolds" mds
-                foo md1 =
-                    if stayingPut md1 then
-                        registerMove md1
-                            << forEachDirective
+                registerHold md1 adjInfo =
+                    if isHold (Tuple.second md1) then
+                        adjInfo
+                            |> registerMove md1
+                            |> forEachDirective
                                 (\md2 ->
-                                    if md1 /= md2 && collide_ md1 md2 then
+                                    if collide_ md1 md2 then
                                         wrappedFailAndHold md2
                                     else
                                         identity
                                 )
                     else
-                        identity
-            in
-                case mds of
-                    [] ->
                         adjInfo
-
-                    md1 :: mds ->
-                        registerHolds <|
-                            foo md1 adjInfo
+            in
+                List.foldr registerHold adjInfo mds
 
         registerStandoffs adjInfo =
             let
@@ -292,8 +285,8 @@ adjudicationStep adjInfo =
                 result =
                     List.foldr registerAdvance adjInfo mds
 
-                _ =
-                    Debug.log "result of registerAdvances: " result.powerLevels
+                -- _ =
+                --     Debug.log "result of registerAdvances: " result.powerLevels
             in
                 List.foldr registerAdvance adjInfo mds
 
@@ -496,4 +489,26 @@ adjudicateRetreats gb rinfo =
 
 adjudicateBuilds : Gameboard -> BuildInfo -> Gameboard
 adjudicateBuilds gb binfo =
-    gb
+    let
+        withBuilds =
+            List.foldr adjudicateBuildDirective gb (asList binfo.buildDirectives)
+    in
+        List.foldr adjudicateDisbandDirective gb (asList binfo.disbandDirectives)
+
+
+adjudicateBuildDirective : BuildDirective -> Gameboard -> Gameboard
+adjudicateBuildDirective ( scid, mp ) gb =
+    case mp of
+        Just piece ->
+            { gb | pieces = piece :: gb.pieces }
+
+        _ ->
+            gb
+
+
+adjudicateDisbandDirective : DisbandDirective -> Gameboard -> Gameboard
+adjudicateDisbandDirective ( p, b ) gb =
+    if b then
+        { gb | pieces = List.filter ((/=) p) gb.pieces }
+    else
+        gb

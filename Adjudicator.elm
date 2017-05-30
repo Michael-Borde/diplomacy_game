@@ -87,16 +87,27 @@ adjudicationStep adjInfo =
             in
                 d1 == d2 || (o1 == d2) && (o2 == d1)
 
-        failAndHold md powerLevels =
+        fail md powerLevels =
             case powerLevels of
                 [] ->
-                    [ ( 1, [ md ] ) ]
+                    []
+
+                ( n, mds ) :: pls ->
+                    ( n, List.filter ((/=) md) mds ) :: pls
+
+        hold ( p, _ ) powerLevels =
+            case powerLevels of
+                [] ->
+                    [ ( 1, [ ( p, Hold ) ] ) ]
 
                 ( 1, mds ) :: _ ->
-                    [ ( 1, md :: mds ) ]
+                    [ ( 1, ( p, Hold ) :: mds ) ]
 
                 pl :: pls ->
-                    pl :: failAndHold md pls
+                    pl :: hold ( p, Hold ) pls
+
+        failAndHold md =
+            fail md >> hold md
 
         wrappedFailAndHold md adjInfo =
             { adjInfo | powerLevels = failAndHold md adjInfo.powerLevels }

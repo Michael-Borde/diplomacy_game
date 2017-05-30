@@ -234,8 +234,7 @@ view model =
             [ buildMap model ]
         , div [class "col-md-4"]
             [ div [] <|
-                h1 [] [ text "View Map" ]
-                    :: viewGameboard model.gameboard
+                viewGameboard model.gameboard
             , div [] <|
                 h1 [] [ text "Issue Directives" ]
                     :: viewCommandPanel model
@@ -282,24 +281,23 @@ viewActors gb =
             if mustDisband gb then
                 getPiecesOfCurrentEmpire gb
                     |> List.map
-                        (\p -> button [ onClick (SelectPiece p) ] [ text (toString p) ])
+                        (\p -> button [ onClick (SelectPiece p) ] [ text (pieceToString p) ])
             else if canBuild gb then
                 getSupplyCenterIDsOfCurrentEmpire gb
                     |> List.map
-                        (\scid -> button [ onClick (SelectSupplyCenter scid) ] [ text (toString scid) ])
+                        (\scid -> button [ onClick (SelectSupplyCenter scid) ] [ text (scToString scid) ])
             else
                 [ text "You have nothing to build or disband!" ]
 
         Move _ ->
             getPiecesOfCurrentEmpire gb
                 |> List.map
-                    (\p -> button [ onClick (SelectPiece p) ] [ text (toString p) ])
+                    (\p -> button [ onClick (SelectPiece p) ] [ text (pieceToString p) ])
 
         Retreat _ ->
             getRetreatingPieces gb
                 |> List.map
-                    (\p -> button [ onClick (SelectPiece p) ] [ text (toString p) ])
-
+                    (\p -> button [ onClick (SelectPiece p) ] [ text (pieceToString p) ])
 
 viewCommandPanel : Model -> List (Html Msg)
 viewCommandPanel m =
@@ -316,11 +314,54 @@ viewCommandPanel m =
                     Just p ->
                         getMoveCommands gb p
                             |> List.map
-                                (\mc -> button [ onClick (SelectMove ( p, mc )) ] [ text (toString mc) ])
+                                (\mc -> button [ onClick (SelectMove ( p, mc )) ] [ text (commandToString mc) ])
 
             _ ->
                 []
 
+
+
+pieceToString : Piece -> String
+pieceToString piece =
+    case piece of
+        Fleet pinfo  -> "Fleet in " ++ locationIDToString pinfo.location
+        Army pinfo -> "Army in " ++ locationIDToString pinfo.location
+
+
+scToString : SupplyCenterID -> String
+scToString scid =
+    case scid of
+        SupplyCenter s -> s
+
+
+locationIDToString : LocationID -> String
+locationIDToString lid =
+    case lid of
+        Coast s -> s
+        Sea s -> s
+        Land s -> s
+
+commandToString : MoveCommand -> String
+commandToString cmnd =
+    case cmnd of
+        Hold -> "Hold"
+        Advance lid -> "Advance to " ++ lidToString lid
+        Support (p, pid) -> "Support " ++ pieceToString p ++ " to " ++ pidToString pid
+        Convoy (p, pid) -> "Convoy " ++ pieceToString p ++ " to " ++ pidToString pid
+
+
+lidToString : LocationID -> String
+lidToString lid =
+    case lid of
+        Coast s -> "Coast of " ++ s
+        Sea s -> s
+        Land s -> s
+
+pidToString : ProvinceID -> String
+pidToString pid =
+    case pid of
+        Capital (SupplyCenter s) -> s
+        Noncapital s -> s
 
 endTurnButton : Html Msg
 endTurnButton =

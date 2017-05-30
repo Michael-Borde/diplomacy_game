@@ -52,6 +52,8 @@ mapData =
     , (Nothing, nothingData ++ seas)
     ]
 
+
+englandData : List ProvinceData
 englandData =
     [ Capital ("Edinburgh",
         [ (Coast "",
@@ -144,6 +146,8 @@ englandData =
         )
     ]
 
+
+franceData : List ProvinceData
 franceData =
     [ Capital ("Brest",
         [ (Coast "",
@@ -238,6 +242,8 @@ franceData =
         )
     ]
 
+
+germanyData : List ProvinceData
 germanyData =
     [ Capital ("Kiel",
         [ (Coast "",
@@ -331,6 +337,8 @@ germanyData =
         )
     ]
 
+
+russiaData : List ProvinceData
 russiaData =
     [ Capital ("St. Petersburg",
         [ (Coast "North",
@@ -439,6 +447,8 @@ russiaData =
         )
     ]
 
+
+italyData : List ProvinceData
 italyData =
     [ Capital ("Venice",
         [ (Coast "",
@@ -538,6 +548,8 @@ italyData =
         )
     ]
 
+
+austriaHungaryData : List ProvinceData
 austriaHungaryData =
     [ Capital ("Trieste",
         [ (Coast "",
@@ -622,6 +634,8 @@ austriaHungaryData =
         )
     ]
 
+
+turkeyData : List ProvinceData
 turkeyData =
     [ Capital ("Constantinople",
         [ (Coast "",
@@ -704,6 +718,8 @@ turkeyData =
         )
     ]
 
+
+nothingData : List ProvinceData
 nothingData =
     [ Capital ("Norway",
         [ (Coast "",
@@ -928,7 +944,7 @@ nothingData =
     ]
 
 
-
+seas : List ProvinceData
 seas = List.map Noncapital
     [ ("Barents Sea",
         [ (Sea,
@@ -1161,16 +1177,18 @@ seas = List.map Noncapital
         )
     ]
 
+empireColors : List { color : String, empire : EmpireID }
 empireColors =
-    [ ("England", "#8E8AC0")
-    , ("France", "#98C9D6")
-    , ("Germany", "#ADA08F")
-    , ("Russia", "#E19289")
-    , ("Italy", "#92CA74")
-    , ("Austria-Hungary", "#D9A679")
-    , ("Turkey", "#D7C94B")
+    [ { empire = "England", color = "#8E8AC0" }
+    , { empire = "France", color = "#98C9D6" }
+    , { empire = "Germany", color = "#ADA08F" }
+    , { empire = "Russia", color = "#E19289" }
+    , { empire = "Italy", color = "#92CA74" }
+    , { empire = "Austria-Hungary", color = "#D9A679" }
+    , { empire = "Turkey", color = "#D7C94B" }
     ]
 
+supplyCenters : List { supplyCenterCoordinates : ( Int, Int ), supplyCenterID : String }
 supplyCenters =
     [ { supplyCenterID = "Ankara", supplyCenterCoordinates = (482,469) }
     , { supplyCenterID = "Belgium", supplyCenterCoordinates = (186,305) }

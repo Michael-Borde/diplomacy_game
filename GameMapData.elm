@@ -9,7 +9,10 @@ module GameMapData exposing (
     Adjacencies,
     Location,
     LandData,
-    ProvinceData)
+    ProvinceData,
+    EmpireColor,
+    GraphicsInfo,
+    SupplyCenterData)
 
 type alias ProvinceID = String
 type alias EmpireID = String
@@ -24,7 +27,7 @@ type alias GameMapData =
     { mapData : MapData
     , startingPieces : List Piece
     , turnOrder : List EmpireID
-    , empireColors : List (EmpireID, String)
+    , empireColors : List EmpireColor
     , supplyCenters : List SupplyCenterData
     }
 
@@ -39,6 +42,11 @@ type ProvinceData
 type alias ProvinceInfo = (ProvinceID, List Location, GraphicsInfo)
 type alias Location = (LocationID, Adjacencies)
 type alias Adjacencies = List (ProvinceID, LocationID)
+
+type alias EmpireColor =
+    { empire : EmpireID
+    , color : String
+    }
 
 type alias GraphicsInfo =
     { polygon : String
